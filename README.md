@@ -3,6 +3,9 @@ We will employ three distinct algorithms to assist us in determining whether fet
 
 The selected algorithms for this task are unsupervised k-NN (k-Nearest Neighbors), Feedforward Neural Network, and, finally, a combination of random forest and decision tree approaches. These algorithms were chosen due to their intriguing nature and our desire to compare their performances. Moreover, we deliberately opted for unsupervised k-NN given that the other algorithms operate under supervised learning, to discern the distinctions in their operational dynamics.
 
-# Also added:
-- k-Means
+# Algorithms:
+- Feed-forward Neural Network
+- Random Forest and Decision Tree
 - Outlier Detection
+- k-Means
+- Unsupervised k-NN
