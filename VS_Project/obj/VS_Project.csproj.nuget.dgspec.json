@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj": {}
+  },
+  "projects": {
+    "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+        "projectName": "VS_Project",
+        "projectPath": "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+        "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
+        "outputPath": "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "ScottPlot": {
+              "target": "Package",
+              "version": "[4.1.67, )"
+            },
+            "ScottPlot.WinForms": {
+              "target": "Package",
+              "version": "[4.1.67, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
