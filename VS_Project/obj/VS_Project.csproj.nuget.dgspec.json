@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj": {}
+    "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj": {}
   },
   "projects": {
-    "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj": {
+    "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+        "projectUniqueName": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj",
         "projectName": "VS_Project",
-        "projectPath": "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+        "projectPath": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj",
         "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
-        "outputPath": "E:\\NewDocuments\\AI_Project\\ai_project\\VS_Project\\obj\\",
+        "outputPath": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

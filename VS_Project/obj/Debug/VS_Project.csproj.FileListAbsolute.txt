@@ -1,0 +1,17 @@
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\VS_Project.exe.config
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\VS_Project.exe
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\VS_Project.pdb
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\ScottPlot.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\ScottPlot.WinForms.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\System.Drawing.Common.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\System.Numerics.Vectors.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\System.ValueTuple.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj.AssemblyReference.cache
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.Form1.resources
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.Forms.KMeansForm.resources
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.Properties.Resources.resources
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj.GenerateResource.cache
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj.CoreCompileInputs.cache
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj.CopyComplete
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.exe
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.pdb

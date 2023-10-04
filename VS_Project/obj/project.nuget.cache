@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "sSgHvHix9AdYwShLKiqxlZeTzf5wFvKCWPHCn2XHJJ3Hmdjw5AM1Eg5/zD/dZ9nKAuxfE6vV42UAoswOpYVTyA==",
+  "success": true,
+  "projectFilePath": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\caleb\\.nuget\\packages\\scottplot\\4.1.67\\scottplot.4.1.67.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\scottplot.winforms\\4.1.67\\scottplot.winforms.4.1.67.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

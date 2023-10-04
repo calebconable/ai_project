@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\KMeansAlgorithm.cs" />
     <Compile Include="CustomPoint.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -53,11 +54,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KMeansForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KMeansForm.Designer.cs">
+      <DependentUpon>KMeansForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KMeans.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KMeansForm.resx">
+      <DependentUpon>KMeansForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

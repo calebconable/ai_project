@@ -1,6 +1,6 @@
-﻿namespace VS_Project
+﻿namespace VS_Project.Forms
 {
-    partial class Form1
+    partial class KMeansForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.kMeansPlot = new ScottPlot.FormsPlot();
+            this.scottPlot = new ScottPlot.FormsPlot();
             this.SuspendLayout();
             // 
-            // kMeansPlot
+            // scottPlot
             // 
-            this.kMeansPlot.Location = new System.Drawing.Point(62, 37);
-            this.kMeansPlot.Name = "kMeansPlot";
-            this.kMeansPlot.Size = new System.Drawing.Size(400, 300);
-            this.kMeansPlot.TabIndex = 0;
+            this.scottPlot.Location = new System.Drawing.Point(36, 26);
+            this.scottPlot.Name = "scottPlot";
+            this.scottPlot.Size = new System.Drawing.Size(400, 300);
+            this.scottPlot.TabIndex = 0;
             // 
-            // Form1
+            // KMeansForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 471);
-            this.Controls.Add(this.kMeansPlot);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.scottPlot);
+            this.Name = "KMeansForm";
+            this.Text = "KMeansForm";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ScottPlot.FormsPlot kMeansPlot;
+        private ScottPlot.FormsPlot scottPlot;
     }
 }
-
