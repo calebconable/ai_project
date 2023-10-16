@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj": {}
+    "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj": {}
   },
   "projects": {
-    "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj": {
+    "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj",
+        "projectUniqueName": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
         "projectName": "VS_Project",
-        "projectPath": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj",
-        "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
-        "outputPath": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\obj\\",
+        "projectPath": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+        "packagesPath": "C:\\Users\\MadsK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
-        "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\MadsK\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,20 +36,17 @@
           "dependencies": {
             "ScottPlot": {
               "target": "Package",
-              "version": "[4.1.67, )"
+              "version": "[4.1.68, )"
             },
             "ScottPlot.WinForms": {
               "target": "Package",
-              "version": "[4.1.67, )"
+              "version": "[4.1.68, )"
             }
           }
         }
       },
       "runtimes": {
         "win": {
-          "#import": []
-        },
-        "win-arm64": {
           "#import": []
         },
         "win-x64": {
