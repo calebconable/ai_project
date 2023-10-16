@@ -30,7 +30,7 @@ namespace VS_Project
             Application.Run(new MainForm());
         }
 
-        /*
+        
         static void RunConsoleTestApp()
         {
             bool consoleAllocated = AllocConsole();
@@ -43,7 +43,7 @@ namespace VS_Project
             PrintRowsClassification();
             Console.ReadKey(true);
         }
-        */
+        
 
         static void DetermineDistributionOfDataset()
         {
@@ -76,6 +76,7 @@ namespace VS_Project
             }
         }
 
+        /*
         static List<KMeans.Point> ExtractDataPoints()
         {
             var frame = DataExtentions.ReadTraningSet();
@@ -113,7 +114,7 @@ namespace VS_Project
             PrintRowsClassification();
             Console.ReadKey(true);
         }
-
+        */
 
     }
 }
