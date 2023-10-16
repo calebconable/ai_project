@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace VS_Project.Algorithms
 {
-    public class KMeansAlgorithm
+    internal class KNN
     {
-        public KMeansAlgorithm() {
-
-            KMeansAlgorithm newKmeansAlgorithm = new KMeansAlgorithm();
-        }
     }
 }

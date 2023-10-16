@@ -46,13 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\KMeansAlgorithm.cs" />
-    <Compile Include="CustomPoint.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Algorithms\KNN.cs" />
+    <Compile Include="Extentions\SampleExtentions.cs" />
+    <Compile Include="Extentions\DataExtentions.cs" />
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\KMeansForm.cs">
       <SubType>Form</SubType>
@@ -60,11 +61,12 @@
     <Compile Include="Forms\KMeansForm.Designer.cs">
       <DependentUpon>KMeansForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="KMeans.cs" />
+    <Compile Include="Algorithms\KMeans.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Singletone\Classification.cs" />
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\KMeansForm.resx">
       <DependentUpon>KMeansForm.cs</DependentUpon>
@@ -78,6 +80,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Files\fetal_health.csv" />
+    <EmbeddedResource Include="Data\test_set.csv" />
+    <EmbeddedResource Include="Data\training_set.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,12 +97,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Deedle">
+      <Version>3.0.0</Version>
+    </PackageReference>
     <PackageReference Include="ScottPlot">
       <Version>4.1.67</Version>
     </PackageReference>
     <PackageReference Include="ScottPlot.WinForms">
       <Version>4.1.67</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

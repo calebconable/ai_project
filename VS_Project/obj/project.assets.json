@@ -2,6 +2,81 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
+      "Deedle/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "ScottPlot/4.1.67": {
         "type": "package",
         "dependencies": {
@@ -102,6 +177,81 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
+      "Deedle/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "ScottPlot/4.1.67": {
         "type": "package",
         "dependencies": {
@@ -192,6 +342,81 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-arm64": {
+      "Deedle/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "ScottPlot/4.1.67": {
         "type": "package",
         "dependencies": {
@@ -282,6 +507,81 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
+      "Deedle/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "ScottPlot/4.1.67": {
         "type": "package",
         "dependencies": {
@@ -372,6 +672,81 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
+      "Deedle/3.0.0": {
+        "type": "package",
+        "dependencies": {
+          "FSharp.Core": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Deedle.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "FSharp.Core/4.5.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FSharp.Core.dll": {
+            "related": ".optdata;.sigdata;.xml"
+          },
+          "lib/net45/FSharp.Core.resources.dll": {}
+        },
+        "resource": {
+          "lib/net45/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net45/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net45/en/FSharp.Core.resources.dll": {
+            "locale": "en"
+          },
+          "lib/net45/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net45/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net45/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net45/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net45/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net45/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net45/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net45/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net45/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net45/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "ScottPlot/4.1.67": {
         "type": "package",
         "dependencies": {
@@ -463,6 +838,68 @@
     }
   },
   "libraries": {
+    "Deedle/3.0.0": {
+      "sha512": "qYSiNngzmNvep4iCwnWM9MUc2NsR2HG+nG5HuEtqxwwJlUMNraokynArNUOZOgw2xGW/bhKKhpZ3nYAVpGyrhw==",
+      "type": "package",
+      "path": "deedle/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Deedle.fsx",
+        "deedle.3.0.0.nupkg.sha512",
+        "deedle.nuspec",
+        "lib/netstandard2.0/Deedle.dll",
+        "lib/netstandard2.0/Deedle.pdb"
+      ]
+    },
+    "FSharp.Core/4.5.2": {
+      "sha512": "apbdQOjzsjQ637kTWQuW29jqwY18jsHMyNC5A+TPJZKFEIE2cIfQWf3V7+mXrxlbX69BueYkv293/g70wuXuRw==",
+      "type": "package",
+      "path": "fsharp.core/4.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsharp.core.4.5.2.nupkg.sha512",
+        "fsharp.core.nuspec",
+        "lib/net45/FSharp.Core.dll",
+        "lib/net45/FSharp.Core.optdata",
+        "lib/net45/FSharp.Core.resources.dll",
+        "lib/net45/FSharp.Core.sigdata",
+        "lib/net45/FSharp.Core.xml",
+        "lib/net45/cs/FSharp.Core.resources.dll",
+        "lib/net45/de/FSharp.Core.resources.dll",
+        "lib/net45/en/FSharp.Core.resources.dll",
+        "lib/net45/es/FSharp.Core.resources.dll",
+        "lib/net45/fr/FSharp.Core.resources.dll",
+        "lib/net45/it/FSharp.Core.resources.dll",
+        "lib/net45/ja/FSharp.Core.resources.dll",
+        "lib/net45/ko/FSharp.Core.resources.dll",
+        "lib/net45/pl/FSharp.Core.resources.dll",
+        "lib/net45/pt-BR/FSharp.Core.resources.dll",
+        "lib/net45/ru/FSharp.Core.resources.dll",
+        "lib/net45/tr/FSharp.Core.resources.dll",
+        "lib/net45/zh-Hans/FSharp.Core.resources.dll",
+        "lib/net45/zh-Hant/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/FSharp.Core.dll",
+        "lib/netstandard1.6/FSharp.Core.optdata",
+        "lib/netstandard1.6/FSharp.Core.sigdata",
+        "lib/netstandard1.6/FSharp.Core.xml",
+        "lib/netstandard1.6/cs/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/de/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/en/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/es/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/fr/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/it/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ja/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ko/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/pl/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/pt-BR/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/ru/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/tr/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/zh-Hans/FSharp.Core.resources.dll",
+        "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
     "ScottPlot/4.1.67": {
       "sha512": "Gdfr4NlbAPJ612JJ0FaF6uKJuO7aThtdgXo8wQ7BmSi65x10RxEux57CiijeMWAEwjx9p9tlFlqE/mjVBc+Luw==",
       "type": "package",
@@ -670,6 +1107,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "Deedle >= 3.0.0",
       "ScottPlot >= 4.1.67",
       "ScottPlot.WinForms >= 4.1.67"
     ]
@@ -712,6 +1150,10 @@
     "frameworks": {
       "net472": {
         "dependencies": {
+          "Deedle": {
+            "target": "Package",
+            "version": "[3.0.0, )"
+          },
           "ScottPlot": {
             "target": "Package",
             "version": "[4.1.67, )"
