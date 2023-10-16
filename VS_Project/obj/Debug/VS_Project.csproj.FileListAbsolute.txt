@@ -7,7 +7,6 @@ E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\System.Drawing.Co
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\System.Numerics.Vectors.dll
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\System.ValueTuple.dll
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj.AssemblyReference.cache
-E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.Form1.resources
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.Forms.KMeansForm.resources
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.Properties.Resources.resources
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj.GenerateResource.cache
@@ -15,21 +14,22 @@ E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.csproj.CopyComplete
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.exe
 E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.pdb
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\VS_Project.exe.config
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\VS_Project.exe
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\VS_Project.pdb
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\ScottPlot.dll
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\ScottPlot.WinForms.dll
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\System.Drawing.Common.dll
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\bin\Debug\System.ValueTuple.dll
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.csproj.AssemblyReference.cache
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.csproj.SuggestedBindingRedirects.cache
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.Form1.resources
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.Forms.KMeansForm.resources
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.Properties.Resources.resources
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.csproj.GenerateResource.cache
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.csproj.CoreCompileInputs.cache
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.csproj.CopyComplete
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.exe
-C:\Users\MadsK\Desktop\AI_Project\ai_project\VS_Project\obj\Debug\VS_Project.pdb
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\Deedle.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\Deedle.pdb
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\FSharp.Core.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\cs\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\de\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\en\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\es\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\fr\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\it\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\ja\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\ko\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\pl\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\pt-BR\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\ru\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\tr\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\zh-Hans\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\bin\Debug\zh-Hant\FSharp.Core.resources.dll
+E:\NewDocuments\1. Test Folder\ai_project\VS_Project\obj\Debug\VS_Project.MainForm.resources

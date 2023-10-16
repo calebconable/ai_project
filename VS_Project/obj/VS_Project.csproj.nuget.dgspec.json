@@ -34,6 +34,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "Deedle": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
             "ScottPlot": {
               "target": "Package",
               "version": "[4.1.68, )"
