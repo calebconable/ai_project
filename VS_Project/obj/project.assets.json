@@ -77,7 +77,7 @@
           }
         }
       },
-      "ScottPlot/4.1.67": {
+      "ScottPlot/4.1.68": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "4.7.2",
@@ -96,10 +96,10 @@
           }
         }
       },
-      "ScottPlot.WinForms/4.1.67": {
+      "ScottPlot.WinForms/4.1.68": {
         "type": "package",
         "dependencies": {
-          "ScottPlot": "4.1.67"
+          "ScottPlot": "4.1.68"
         },
         "frameworkAssemblies": [
           "System.Runtime.InteropServices.RuntimeInformation"
@@ -252,7 +252,7 @@
           }
         }
       },
-      "ScottPlot/4.1.67": {
+      "ScottPlot/4.1.68": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "4.7.2",
@@ -271,10 +271,10 @@
           }
         }
       },
-      "ScottPlot.WinForms/4.1.67": {
+      "ScottPlot.WinForms/4.1.68": {
         "type": "package",
         "dependencies": {
-          "ScottPlot": "4.1.67"
+          "ScottPlot": "4.1.68"
         },
         "frameworkAssemblies": [
           "System.Runtime.InteropServices.RuntimeInformation"
@@ -417,7 +417,7 @@
           }
         }
       },
-      "ScottPlot/4.1.67": {
+      "ScottPlot/4.1.68": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "4.7.2",
@@ -436,10 +436,10 @@
           }
         }
       },
-      "ScottPlot.WinForms/4.1.67": {
+      "ScottPlot.WinForms/4.1.68": {
         "type": "package",
         "dependencies": {
-          "ScottPlot": "4.1.67"
+          "ScottPlot": "4.1.68"
         },
         "frameworkAssemblies": [
           "System.Runtime.InteropServices.RuntimeInformation"
@@ -582,7 +582,7 @@
           }
         }
       },
-      "ScottPlot/4.1.67": {
+      "ScottPlot/4.1.68": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "4.7.2",
@@ -601,10 +601,10 @@
           }
         }
       },
-      "ScottPlot.WinForms/4.1.67": {
+      "ScottPlot.WinForms/4.1.68": {
         "type": "package",
         "dependencies": {
-          "ScottPlot": "4.1.67"
+          "ScottPlot": "4.1.68"
         },
         "frameworkAssemblies": [
           "System.Runtime.InteropServices.RuntimeInformation"
@@ -747,7 +747,7 @@
           }
         }
       },
-      "ScottPlot/4.1.67": {
+      "ScottPlot/4.1.68": {
         "type": "package",
         "dependencies": {
           "System.Drawing.Common": "4.7.2",
@@ -766,10 +766,10 @@
           }
         }
       },
-      "ScottPlot.WinForms/4.1.67": {
+      "ScottPlot.WinForms/4.1.68": {
         "type": "package",
         "dependencies": {
-          "ScottPlot": "4.1.67"
+          "ScottPlot": "4.1.68"
         },
         "frameworkAssemblies": [
           "System.Runtime.InteropServices.RuntimeInformation"
@@ -900,10 +900,10 @@
         "lib/netstandard1.6/zh-Hant/FSharp.Core.resources.dll"
       ]
     },
-    "ScottPlot/4.1.67": {
-      "sha512": "Gdfr4NlbAPJ612JJ0FaF6uKJuO7aThtdgXo8wQ7BmSi65x10RxEux57CiijeMWAEwjx9p9tlFlqE/mjVBc+Luw==",
+    "ScottPlot/4.1.68": {
+      "sha512": "3ECJcKrX/VRv32kesrPRCH29q4+eHjZGxhsy09ssKBwif7WNoLs97xTYWFbpgq5Agwkk3M8k/GEQ4BZ06Vrsyg==",
       "type": "package",
-      "path": "scottplot/4.1.67",
+      "path": "scottplot/4.1.68",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -916,14 +916,14 @@
         "lib/net6.0/ScottPlot.xml",
         "lib/netstandard2.0/ScottPlot.dll",
         "lib/netstandard2.0/ScottPlot.xml",
-        "scottplot.4.1.67.nupkg.sha512",
+        "scottplot.4.1.68.nupkg.sha512",
         "scottplot.nuspec"
       ]
     },
-    "ScottPlot.WinForms/4.1.67": {
-      "sha512": "Z8w0Ti8rouOXXcfKy1tFh/8Ef58BL1p8vQO34aTGo7ZL+kEbHY9uM0Sdm/cfXqwNcNAQa9+FDAu9I72cxrP9jA==",
+    "ScottPlot.WinForms/4.1.68": {
+      "sha512": "amBcSIycxIxls+sn8eJduyBRutqvCJXom9f2njZnlL+oIvbmeAlsYGFiRhkcTDUClCch/mdK/4xHF/Nij9Gwpw==",
       "type": "package",
-      "path": "scottplot.winforms/4.1.67",
+      "path": "scottplot.winforms/4.1.68",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -934,7 +934,7 @@
         "lib/net48/ScottPlot.WinForms.dll",
         "lib/net6.0-windows7.0/ScottPlot.WinForms.dll",
         "lib/netcoreapp3.1/ScottPlot.WinForms.dll",
-        "scottplot.winforms.4.1.67.nupkg.sha512",
+        "scottplot.winforms.4.1.68.nupkg.sha512",
         "scottplot.winforms.nuspec"
       ]
     },
@@ -1108,29 +1108,29 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "Deedle >= 3.0.0",
-      "ScottPlot >= 4.1.67",
-      "ScottPlot.WinForms >= 4.1.67"
+      "ScottPlot >= 4.1.68",
+      "ScottPlot.WinForms >= 4.1.68"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\caleb\\.nuget\\packages\\": {},
-    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\MadsK\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj",
+      "projectUniqueName": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
       "projectName": "VS_Project",
-      "projectPath": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\VS_Project.csproj",
-      "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
-      "outputPath": "E:\\NewDocuments\\1. Test Folder\\ai_project\\VS_Project\\obj\\",
+      "projectPath": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+      "packagesPath": "C:\\Users\\MadsK\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MadsK\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1156,11 +1156,11 @@
           },
           "ScottPlot": {
             "target": "Package",
-            "version": "[4.1.67, )"
+            "version": "[4.1.68, )"
           },
           "ScottPlot.WinForms": {
             "target": "Package",
-            "version": "[4.1.67, )"
+            "version": "[4.1.68, )"
           }
         }
       }

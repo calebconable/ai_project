@@ -30,6 +30,7 @@ namespace VS_Project
             Application.Run(new MainForm());
         }
 
+        /*
         static void RunConsoleTestApp()
         {
             bool consoleAllocated = AllocConsole();
@@ -42,7 +43,7 @@ namespace VS_Project
             PrintRowsClassification();
             Console.ReadKey(true);
         }
-
+        */
 
         static void DetermineDistributionOfDataset()
         {
@@ -74,5 +75,45 @@ namespace VS_Project
 
             }
         }
+
+        static List<KMeans.Point> ExtractDataPoints()
+        {
+            var frame = DataExtentions.ReadTraningSet();
+            var feature1Values = frame.GetColumn<double>("fetal_movement").Values.ToArray();
+            var feature2Values = frame.GetColumn<double>("abnormal_short_term_variability").Values.ToArray();
+
+
+            var dataPoints = new List<KMeans.Point>();
+            for (int i = 0; i < feature1Values.Length; i++)
+            {
+                dataPoints.Add(new KMeans.Point(feature1Values[i], feature2Values[i]));
+            }
+            return dataPoints;
+        }
+
+        static void ClusterDataPoints()
+        {
+            var dataPoints = ExtractDataPoints();
+
+            var kMeans = new KMeans(3, dataPoints); 
+            kMeans.Run();
+            kMeans.PlotClusters();
+        }
+
+        static void RunConsoleTestApp()
+        {
+            bool consoleAllocated = AllocConsole();
+            if (!consoleAllocated)
+            {
+                MessageBox.Show("Failed to allocate console!");
+                return;
+            }
+
+            ClusterDataPoints();  // Add this line
+            PrintRowsClassification();
+            Console.ReadKey(true);
+        }
+
+
     }
 }
