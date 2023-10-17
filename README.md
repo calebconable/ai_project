@@ -18,6 +18,12 @@ When deciding on the best **`k`** for k-means clustering, it's crucial to consid
 
 ### Class-Wise Accuracy:
 
+| K-Value | Class 1 Accuracy | Class 2 Accuracy | Class 3 Accuracy | Overall Accuracy |
+|---------|------------------|------------------|------------------|------------------|
+| 34      | 96.37%           | 69.49%           | 27.78%           | 86.85%           |
+| 166     | 94.56%           | 67.80%           | 66.67%           | 88.50%           |
+| 29      | 94.26%           | 76.27%           | 25.00%           | 85.92%           |
+
 - **Class 1**:
     - **`k = 34`** provides the **highest** accuracy.
     - **`k = 166`** and **`k = 29`** are slightly lower, with comparable accuracies.
