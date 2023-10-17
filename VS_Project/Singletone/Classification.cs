@@ -11,39 +11,34 @@ namespace VS_Project.Singletone
     public class Classification
     {
         public readonly static string CLASS_ATTR_NAME = "fetal_health";
-        public static Frame<int, string> TrainingSet
+        public readonly static string[] ATTREBUTES_TO_INCLUDE = new string[] { "prolongued_decelerations", "abnormal_short_term_variability", "percentage_of_time_with_abnormal_long_term_variability", "accelerations", "fetal_health" };
+        public static Frame<int, string> TrainingSet => DataExtentions.ReadTraningSet((df) =>
         {
-            get => DataExtentions.ReadTraningSet();
-        }
-        public static Frame<int, string> TestSet
+            DataExtentions.IncludeAttributes(df, ATTREBUTES_TO_INCLUDE);
+        });
+        public static Frame<int, string> TestSet => DataExtentions.ReadTestSet((df) =>
         {
-            get => DataExtentions.ReadTestSet();
-        }
-        public static RowSeries<int, string> TrainingSamples
-        {
-            get => TrainingSet.Rows;
-        }
-        public static RowSeries<int, string> TestSamples
-        {
-            get => TestSet.Rows;
-        }
+            DataExtentions.IncludeAttributes(df, ATTREBUTES_TO_INCLUDE);
+        });
+        public static RowSeries<int, string> TrainingSamples => TrainingSet.Rows;
+        public static RowSeries<int, string> TestSamples => TestSet.Rows;
         public int PredefinedClass { get; private set; }
-        public int ClassifiedAs { get; private set; }
-        public bool IsCorrectClassification => ClassifiedAs == PredefinedClass;
+        public int PredictedClass { get; private set; }
+        public bool IsCorrectlyClassified => PredictedClass == PredefinedClass;
         public Classification(int predefined, int classified)
         {
             PredefinedClass = predefined;
-            ClassifiedAs = classified;
+            PredictedClass = classified;
         }
 
         public override string ToString()
         {
-            return $"Classification of {CLASS_ATTR_NAME} is {IsCorrectClassification}";
+            return $"Classification of {CLASS_ATTR_NAME} is {IsCorrectlyClassified}";
         } 
         
         public string ToString(string additionalString)
         {
-            return $"Classification of {CLASS_ATTR_NAME} ({additionalString}) is {IsCorrectClassification}";
+            return $"Classification of {CLASS_ATTR_NAME} ({additionalString}) is {IsCorrectlyClassified}";
         }
 
         public static Dictionary<int, T> NewClassDictionary<T>()

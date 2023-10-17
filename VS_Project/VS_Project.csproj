@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\kMeansCaleb.cs" />
     <Compile Include="Algorithms\KNN.cs" />
     <Compile Include="Extentions\ClassificationExtentions.cs" />
     <Compile Include="Extentions\DoubleExtensions.cs" />

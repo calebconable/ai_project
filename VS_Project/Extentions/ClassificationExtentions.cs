@@ -14,12 +14,12 @@ namespace VS_Project.Extentions
         public static Matrix DetermineConfusionMatrix(this IList<Classification> classifications)
         {
             // Assuming maximum class number as the matrix dimension
-            int dimension = classifications.Max(c => Math.Max(c.PredefinedClass, c.ClassifiedAs));
+            int dimension = classifications.Max(c => Math.Max(c.PredefinedClass, c.PredictedClass));
             Matrix matrix = new Matrix(dimension, dimension);
 
             foreach (var c in classifications)
             {
-                matrix.Increment(c.PredefinedClass - 1, c.ClassifiedAs - 1); // Assuming 0-indexed matrix
+                matrix.Increment(c.PredefinedClass - 1, c.PredictedClass - 1); // Assuming 0-indexed matrix
             }
 
             return matrix;
@@ -62,7 +62,7 @@ namespace VS_Project.Extentions
             var accuracies = DetermineAccuracy(classifications);
 
             // Calculate overall accuracy
-            int totalCorrect = classifications.Count(c => c.IsCorrectClassification);
+            int totalCorrect = classifications.Count(c => c.IsCorrectlyClassified);
             double overallAccuracy = (double)totalCorrect / classifications.Count;
 
             StringBuilder resultBuilder = new StringBuilder();

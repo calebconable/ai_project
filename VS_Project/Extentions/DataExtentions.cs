@@ -44,29 +44,42 @@ namespace VS_Project.Extentions
             return new List<string>(column.Values);
         }
 
-        public static Frame<int, string> ReadTraningSet()
+        public static List<float> GetColumnValues(this Frame<int, string> df, string columnName)
+        {
+            // Extract the column from the dataframe
+            Series<int, float> column = df.GetColumn<float>(columnName);
+
+            // Convert the series to a list and return
+            return new List<float>(column.Values);
+        }
+
+        public static Frame<int, string> ReadTraningSet(Action<Frame<int, string>> action = null)
         {
             var csvContent = ReadEmbeddedResource("Data", "training_set.csv");
             // Convert the CSV string into a MemoryStream
             using (MemoryStream memoryStream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(csvContent)))
             {
                 // Use Deedle to read the CSV content from the MemoryStream
-                return Frame.ReadCsv(memoryStream, true, separators: ",");
+                var df = Frame.ReadCsv(memoryStream, true, separators: ",");
+                action?.Invoke(df);
+                return df;
             }
         }
-        public static Frame<int, string> ReadTestSet()
+        public static Frame<int, string> ReadTestSet(Action<Frame<int, string>> action = null)
         {
             var csvContent = ReadEmbeddedResource("Data", "test_set.csv");
             // Convert the CSV string into a MemoryStream
             using (MemoryStream memoryStream = new MemoryStream(System.Text.Encoding.UTF8.GetBytes(csvContent)))
             {
                 // Use Deedle to read the CSV content from the MemoryStream
-                return Frame.ReadCsv(memoryStream, true, separators: ",");
+                var df = Frame.ReadCsv(memoryStream, true, separators: ",");
+                action?.Invoke(df);
+                return df;
             }
         }
 
 
-        public static void ExcludeAttributes(this Frame<int, string> df, params string[] attributesToExclude)
+        public static void ExcludeAttributes(this Frame<int, string> df, string[] attributesToExclude)
         {
 
             // Drop specified columns
@@ -79,6 +92,28 @@ namespace VS_Project.Extentions
                 }
             }
         }
+
+        public static void IncludeAttributes(this Frame<int, string> df, string[] attributesToInclude)
+        {
+            // List of columns to drop
+            List<string> columnsToDrop = new List<string>();
+
+            // Identify columns that are not in the attributesToInclude list
+            foreach (var columnKey in df.ColumnKeys)
+            {
+                if (!attributesToInclude.Contains(columnKey))
+                {
+                    columnsToDrop.Add(columnKey);
+                }
+            }
+
+            // Drop identified columns
+            foreach (var attr in columnsToDrop)
+            {
+                df.DropColumn(attr);
+            }
+        }
+
 
         private static Random rng = new Random();
         public static void Shuffle<T>(this IList<T> list)

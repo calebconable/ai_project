@@ -28,7 +28,8 @@ namespace VS_Project
         {
             RunConsoleTestApp(() =>
             {
-                KNN.TestDifferentKValues(10, 20);
+                kMeansCaleb.TestRun(30, 50, n:.10f);
+                // KNN.TestDifferentKValues(1, 2);
             });
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

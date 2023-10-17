@@ -33,43 +33,6 @@ namespace VS_Project.Algorithms
             });
         }
 
-        public (Classification prediction1, Classification prediction2ImportanceToKNearestNeighbors) ClassifyASingleItem(int k)
-        {
-            // Get a row/tuple of from the testSampleSet
-            ObjectSeries<string> testSample = Classification.TestSamples.Values.FirstOrDefault();
-
-            List<KNNPoint> classDistances = new List<KNNPoint>();
-            foreach (var trainingSample in Classification.TrainingSet.Rows.Values)
-            {
-                classDistances.Add(new KNNPoint(trainingSample, testSample));
-            }
-            // Order with closest distance first
-            List<KNNPoint> ordersClassDistance = classDistances.OrderBy(x => x.Distance).ToList();
-
-            // Take k nearest neighbors
-            List<KNNPoint> ordersKClassDistance = ordersClassDistance.Take(k).ToList();
-
-
-            int mostCommonClassValue = ordersKClassDistance.GroupBy(x => x.PredifinedClassValue)
-                                        .OrderByDescending(g => g.Count())
-                                        .First()
-                                        .Key;
-
-            int classValueWithLargestWeight = ordersKClassDistance.GroupBy(x => x.PredifinedClassValue)
-                                                 .Select(g => new { ClassValue = g.Key, TotalWeights = g.Sum(item => item.Weight) })
-                                                 .OrderByDescending(g => g.TotalWeights)
-                                                 .First()
-                                                 .ClassValue;
-
-            Classification prediction1 = new Classification(testSample.GetPredefinedClass(), mostCommonClassValue);
-            Classification prediction2 = new Classification(testSample.GetPredefinedClass(), classValueWithLargestWeight);
-            return (prediction1, prediction2);
-
-            /*foreach(var testSample in Classification.Instance.TestSamples.Values)
-            {
-
-            }*/
-        }
         public IList<Classification> Classify(int k)
         {
             List<Classification> classifications = new List<Classification>();  
@@ -124,7 +87,16 @@ namespace VS_Project.Algorithms
 
     public class KNNPoint
     {
-        public int PredifinedClassValue { get; private set; }
+        private int? predefinedClass;
+        public int PredifinedClassValue
+        {
+            get { 
+                if(predefinedClass == null)
+                    predefinedClass = TrainingSample.GetPredefinedClass();
+                return (int)predefinedClass; 
+            }
+
+        }
         public double Distance
         {
             get => SampleExtention.EuclideanDistance(TrainingSample, TestSample);
@@ -138,7 +110,6 @@ namespace VS_Project.Algorithms
 
         public KNNPoint(ObjectSeries<string> trainingSample, ObjectSeries<string> testSample)
         {
-            PredifinedClassValue = trainingSample.GetPredefinedClass();
             TrainingSample = trainingSample;
             TestSample = testSample;
         }

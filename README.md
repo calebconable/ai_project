@@ -9,3 +9,79 @@ The selected algorithms for this task are unsupervised k-NN (k-Nearest Neighbors
 - Outlier Detection
 - k-Means
 - Unsupervised k-NN
+
+
+---
+### **Analysis of k-values for k-Means Algorithm**
+
+When deciding on the best **`k`** for k-means clustering, it's crucial to consider both the overall accuracy and the accuracy of individual classes. This is especially important if certain classes carry more weight or if there are imbalances among the classes.
+
+### Class-Wise Accuracy:
+
+- **Class 1**:
+    - **`k = 34`** provides the **highest** accuracy.
+    - **`k = 166`** and **`k = 29`** are slightly lower, with comparable accuracies.
+- **Class 2**:
+    - **`k = 29`** achieves the **highest** accuracy.
+    - **`k = 34`** comes in next.
+    - **`k = 166`** yields the lowest accuracy for this class.
+- **Class 3**:
+    - **`k = 166`** stands out with a **significantly higher** accuracy.
+    - Both **`k = 34`** and **`k = 29`** lag behind, with **`k = 34`** slightly ahead of **`k = 29`**.
+
+### Overall Accuracy:
+
+- **`k = 166`** boasts the **highest** overall accuracy.
+- **`k = 34`** trails closely behind.
+- **`k = 29`** is at the third spot.
+
+### Recommendations:
+
+1. For those primarily concerned with **overall accuracy**, **`k = 166`** emerges as the top choice.
+2. If precision in **Class 3** is paramount, then **`k = 166`** remains unbeatable.
+3. For those leaning towards **interpretability, computational efficiency, and simpler model representation**, **`k = 34`** strikes a commendable balance between the number of clusters and performance.
+
+However, it's worth noting that opting for a large number of clusters (e.g., 166) may demand more computational resources. It could also pose challenges in terms of interpretation and might run the risk of overfitting, especially if the model isn't validated with diverse datasets.
+
+**Conclusion**:
+Based on the data at hand, **`k = 166`** would be the choice for maximum accuracy. But for a blend of simplicity and performance, **`k = 34`** is recommended. Always ensure to validate the model across varied datasets to vouch for its robustness.
+
+---
+k-NN Algorithm Selection Analysis
+1. Using Euclidean Distance and Weighted sum (Full Feature Set):
+K-Value	Execution Time (ms)	Class 1 Accuracy	Class 2 Accuracy	Class 3 Accuracy	Overall Accuracy
+1	7355	95.77%	59.32%	83.33%	89.67%
+2	7086	95.77%	59.32%	83.33%	89.67%
+3	7059	95.77%	62.71%	83.33%	90.14%
+4	7085	96.07%	62.71%	83.33%	90.38%
+5	7140	96.07%	62.71%	83.33%	90.38%
+6	7060	95.77%	64.41%	83.33%	90.38%
+7	7054	96.37%	62.71%	83.33%	90.61%
+8	7075	96.98%	57.63%	83.33%	90.38%
+9	7041	96.68%	55.93%	77.78%	89.44%
+2. Using Euclidean Distance and Weighted sum with 5 Features:
+Features:
+
+prolonged_decelerations
+abnormal_short_term_variability
+percentage_of_time_with_abnormal_long_term_variability
+accelerations
+fetal_health
+K-Value	Execution Time (ms)	Class 1 Accuracy	Class 2 Accuracy	Class 3 Accuracy	Overall Accuracy
+1	6584	96.98%	83.05%	88.89%	94.37%
+2	6093	96.98%	83.05%	88.89%	94.37%
+3	6133	94.56%	77.97%	91.67%	92.02%
+...	...	...	...	...	...
+(Note: The full table for the 5-features set is shortened for brevity.)
+
+Recommendations:
+If you're focusing on the best overall accuracy with the full feature set, K = 7 offers the highest overall accuracy of 90.61%.
+
+When working with the selected 5 features, K = 1 or K = 2 provide the highest overall accuracy at 94.37%. These values of K significantly outperform the full feature set in terms of overall accuracy and also have relatively quick execution times.
+
+It's crucial to consider both individual class accuracies and overall accuracy when making a decision. In scenarios where all classes are equally important, the overall accuracy is a reliable indicator. However, if certain classes are more critical than others, you might want to prioritize those class accuracies.
+
+The execution time does vary with the k-values, but the variations are not significant enough to heavily impact the decision. Still, in real-time or time-sensitive applications, this can be a factor to consider.
+
+Conclusion:
+For the full feature set, a K value of 7 is recommended. When using the 5-feature set, a K value of 1 or 2 is ideal, given their superior overall accuracies.
