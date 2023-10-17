@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\KNN.cs" />
+    <Compile Include="Extentions\ClassificationExtentions.cs" />
+    <Compile Include="Extentions\DoubleExtensions.cs" />
     <Compile Include="Extentions\SampleExtentions.cs" />
     <Compile Include="Extentions\DataExtentions.cs" />
     <Compile Include="Forms\MainForm.cs">
@@ -62,6 +64,7 @@
       <DependentUpon>KMeansForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Algorithms\KMeans.cs" />
+    <Compile Include="Model\Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singletone\Classification.cs" />
@@ -107,8 +110,6 @@
       <Version>4.1.68</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

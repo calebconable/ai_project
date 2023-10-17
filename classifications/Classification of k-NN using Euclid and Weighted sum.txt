@@ -1,0 +1,57 @@
+Classification of k-NN using Euclidian Distance and Weighted sum:
+
+
+Running kNN classification rate
+K: 1 Time: 7355ms
+Class 1: 95,77 %
+Class 2: 59,32 %
+Class 3: 83,33 %
+Overall Accuracy: 89,67 %
+
+K: 2 Time: 7086ms
+Class 1: 95,77 %
+Class 2: 59,32 %
+Class 3: 83,33 %
+Overall Accuracy: 89,67 %
+
+K: 3 Time: 7059ms
+Class 1: 95,77 %
+Class 2: 62,71 %
+Class 3: 83,33 %
+Overall Accuracy: 90,14 %
+
+K: 4 Time: 7085ms
+Class 1: 96,07 %
+Class 2: 62,71 %
+Class 3: 83,33 %
+Overall Accuracy: 90,38 %
+
+K: 5 Time: 7140ms
+Class 1: 96,07 %
+Class 2: 62,71 %
+Class 3: 83,33 %
+Overall Accuracy: 90,38 %
+
+K: 6 Time: 7060ms
+Class 1: 95,77 %
+Class 2: 64,41 %
+Class 3: 83,33 %
+Overall Accuracy: 90,38 %
+
+K: 7 Time: 7054ms
+Class 1: 96,37 %
+Class 2: 62,71 %
+Class 3: 83,33 %
+Overall Accuracy: 90,61 %
+
+K: 8 Time: 7075ms
+Class 1: 96,98 %
+Class 2: 57,63 %
+Class 3: 83,33 %
+Overall Accuracy: 90,38 %
+
+K: 9 Time: 7041ms
+Class 1: 96,68 %
+Class 2: 55,93 %
+Class 3: 77,78 %
+Overall Accuracy: 89,44 %

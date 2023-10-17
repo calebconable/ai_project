@@ -1,0 +1,55 @@
+Classification using Euclidian Distance:
+
+K: 1 Time: 7975ms
+Class 1: 95,77 %
+Class 2: 59,32 %
+Class 3: 83,33 %
+Overall Accuracy: 89,67 %
+
+K: 2 Time: 7135ms
+Class 1: 95,77 %
+Class 2: 59,32 %
+Class 3: 83,33 %
+Overall Accuracy: 89,67 %
+
+K: 3 Time: 7225ms
+Class 1: 95,77 %
+Class 2: 62,71 %
+Class 3: 80,56 %
+Overall Accuracy: 89,91 %
+
+K: 4 Time: 7278ms
+Class 1: 96,37 %
+Class 2: 62,71 %
+Class 3: 80,56 %
+Overall Accuracy: 90,38 %
+
+K: 5 Time: 7386ms
+Class 1: 96,37 %
+Class 2: 62,71 %
+Class 3: 77,78 %
+Overall Accuracy: 90,14 %
+
+K: 6 Time: 7177ms
+Class 1: 96,37 %
+Class 2: 64,41 %
+Class 3: 77,78 %
+Overall Accuracy: 90,38 %
+
+K: 7 Time: 7060ms
+Class 1: 96,07 %
+Class 2: 62,71 %
+Class 3: 77,78 %
+Overall Accuracy: 89,91 %
+
+K: 8 Time: 7080ms
+Class 1: 96,98 %
+Class 2: 55,93 %
+Class 3: 80,56 %
+Overall Accuracy: 89,91 %
+
+K: 9 Time: 7073ms
+Class 1: 96,98 %
+Class 2: 57,63 %
+Class 3: 75,00 %
+Overall Accuracy: 89,67 %

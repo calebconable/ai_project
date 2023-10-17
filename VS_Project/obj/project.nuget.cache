@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "Pgsr0bR4RoWBIoFzInKEA3GNaO+oVGrjQ5wwEHN4U4987Ku93AnPqOKXI7UZAFpzH428/CGGH7EZfMQ1Mr2glg==",
+  "dgSpecHash": "nkySd5o2gcop6Amzt9RkDngss9t9B32y8xbULGg1YygC7DGMaEAsZF7h6dxK6W4C41l4WRq35tzysp4zoJRyzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+  "projectFilePath": "E:\\NewDocuments\\AI_MAIN_PROJECT\\ai_project\\VS_Project\\VS_Project.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\MadsK\\.nuget\\packages\\deedle\\3.0.0\\deedle.3.0.0.nupkg.sha512",
-    "C:\\Users\\MadsK\\.nuget\\packages\\fsharp.core\\4.5.2\\fsharp.core.4.5.2.nupkg.sha512",
-    "C:\\Users\\MadsK\\.nuget\\packages\\scottplot\\4.1.68\\scottplot.4.1.68.nupkg.sha512",
-    "C:\\Users\\MadsK\\.nuget\\packages\\scottplot.winforms\\4.1.68\\scottplot.winforms.4.1.68.nupkg.sha512",
-    "C:\\Users\\MadsK\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
-    "C:\\Users\\MadsK\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\MadsK\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
-    "C:\\Users\\MadsK\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+    "C:\\Users\\caleb\\.nuget\\packages\\deedle\\3.0.0\\deedle.3.0.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\fsharp.core\\4.5.2\\fsharp.core.4.5.2.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\scottplot\\4.1.68\\scottplot.4.1.68.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\scottplot.winforms\\4.1.68\\scottplot.winforms.4.1.68.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

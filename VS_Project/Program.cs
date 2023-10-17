@@ -2,10 +2,12 @@
 using Deedle;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VS_Project.Algorithms;
 using VS_Project.Extentions;
 using VS_Project.Forms;
 using VS_Project.Singletone;
@@ -24,14 +26,17 @@ namespace VS_Project
         [STAThread]
         static void Main()
         {
-            RunConsoleTestApp();
+            RunConsoleTestApp(() =>
+            {
+                KNN.TestDifferentKValues(10, 20);
+            });
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
 
         
-        static void RunConsoleTestApp()
+        static void RunConsoleTestApp(Action customActionToRun = null)
         {
             bool consoleAllocated = AllocConsole();
             if (!consoleAllocated)
@@ -40,7 +45,7 @@ namespace VS_Project
                 return;
             }
 
-            PrintRowsClassification();
+            customActionToRun?.Invoke();
             Console.ReadKey(true);
         }
         
@@ -68,7 +73,7 @@ namespace VS_Project
         static void PrintRowsClassification()
         {
             int rowId = 0;
-            foreach (var sample in Classification.Instance.TestSamples.Values)
+            foreach (var sample in Classification.TestSamples.Values)
             {
                 var cellValue = sample.GetPredefinedClass();
                 Console.WriteLine($"Classification Row ID: {rowId++} => {cellValue}");

@@ -13,7 +13,16 @@ namespace AI_Masters_Project
         {
             return sample.TryGetAs<int>("fetal_health").Value;
         }
-        public static double Distance(this ObjectSeries<string> sample1, ObjectSeries<string> sample2)
+
+        /// <summary>
+        /// Calculate the Euclidean distance between two samples
+        /// </summary>
+        /// <param name="sample1"></param>
+        /// <param name="sample2"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        public static double EuclideanDistance(this ObjectSeries<string> sample1, ObjectSeries<string> sample2)
         {
             if (sample1 == null || sample2 == null)
                 throw new ArgumentNullException("Samples cannot be null.");
@@ -38,6 +47,23 @@ namespace AI_Masters_Project
             }
 
             return Math.Sqrt(sum);
+        }
+
+        /// <summary>
+        /// Calculates the Euclidean distance between all samples in the sample space (training set) and a single sample from
+        /// a test set.
+        /// </summary>
+        /// <param name="trainingSampleSet"></param>
+        /// <param name="testSample"></param>
+        /// <returns></returns>
+        public static double EuclideanDistance(this Frame<int, string> trainingSampleSet, ObjectSeries<string> testSample)
+        {
+            double distance = 0.0;
+            foreach(var trainingSample in trainingSampleSet.Rows.Values)
+            {
+                distance += EuclideanDistance(trainingSample, testSample);
+            }
+            return distance;
         }
 
     }

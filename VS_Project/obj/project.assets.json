@@ -1113,24 +1113,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MadsK\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\caleb\\.nuget\\packages\\": {},
+    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
+      "projectUniqueName": "E:\\NewDocuments\\AI_MAIN_PROJECT\\ai_project\\VS_Project\\VS_Project.csproj",
       "projectName": "VS_Project",
-      "projectPath": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\VS_Project.csproj",
-      "packagesPath": "C:\\Users\\MadsK\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MadsK\\Desktop\\AI_Project\\ai_project\\VS_Project\\obj\\",
+      "projectPath": "E:\\NewDocuments\\AI_MAIN_PROJECT\\ai_project\\VS_Project\\VS_Project.csproj",
+      "packagesPath": "C:\\Users\\caleb\\.nuget\\packages\\",
+      "outputPath": "E:\\NewDocuments\\AI_MAIN_PROJECT\\ai_project\\VS_Project\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\MadsK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\caleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
