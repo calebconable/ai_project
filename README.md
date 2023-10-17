@@ -47,47 +47,37 @@ However, it's worth noting that opting for a large number of clusters (e.g., 166
 Based on the data at hand, **`k = 166`** would be the choice for maximum accuracy. But for a blend of simplicity and performance, **`k = 34`** is recommended. Always ensure to validate the model across varied datasets to vouch for its robustness.
 
 ---
-k-NN Algorithm Selection Analysis
-1. Using Euclidean Distance and Weighted sum (Full Feature Set):
-| K-Value | Execution Time (ms) | Class 1 Accuracy | Class 2 Accuracy | Class 3 Accuracy | Overall Accuracy |
-|---------|---------------------|------------------|------------------|------------------|------------------|
-| 1       | 7355               | 95.77%           | 59.32%           | 83.33%           | 89.67%           |
-| 2       | 7086               | 95.77%           | 59.32%           | 83.33%           | 89.67%           |
-| 3       | 7059               | 95.77%           | 62.71%           | 83.33%           | 90.14%           |
-| 4       | 7085               | 96.07%           | 62.71%           | 83.33%           | 90.38%           |
-| 5       | 7140               | 96.07%           | 62.71%           | 83.33%           | 90.38%           |
-| 6       | 7060               | 95.77%           | 64.41%           | 83.33%           | 90.38%           |
-| 7       | 7054               | 96.37%           | 62.71%           | 83.33%           | 90.61%           |
-| 8       | 7075               | 96.98%           | 57.63%           | 83.33%           | 90.38%           |
-| 9       | 7041               | 96.68%           | 55.93%           | 77.78%           | 89.44%           |
+## k-NN Algorithm Selection Analysis
 
-2. Using Euclidean Distance and Weighted sum with 5 Features:
-Features: 
-- prolonged_decelerations
-- abnormal_short_term_variability
-- percentage_of_time_with_abnormal_long_term_variability
-- accelerations
-- fetal_health
-Features: 
-- prolonged_decelerations
-- abnormal_short_term_variability
-- percentage_of_time_with_abnormal_long_term_variability
-- accelerations
-- fetal_health
+**Using Euclidean Distance and Weighted Sum (Full Feature Set)**
+
 | K-Value | Execution Time (ms) | Class 1 Accuracy | Class 2 Accuracy | Class 3 Accuracy | Overall Accuracy |
 |---------|---------------------|------------------|------------------|------------------|------------------|
-| 1       | 6584               | 96.98%           | 83.05%           | 88.89%           | 94.37%           |
-| 2       | 6093               | 96.98%           | 83.05%           | 88.89%           | 94.37%           |
-| 3       | 6133               | 94.56%           | 77.97%           | 91.67%           | 92.02%           |
-| 4       | 6238               | 96.37%           | 76.27%           | 83.33%           | 92.49%           |
-| 5       | 6185               | 96.98%           | 77.97%           | 83.33%           | 93.19%           |
-| 6       | 6113               | 96.68%           | 77.97%           | 83.33%           | 92.96%           |
-| 7       | 6093               | 96.37%           | 77.97%           | 88.89%           | 93.19%           |
-| 8       | 6136               | 95.77%           | 77.97%           | 83.33%           | 92.25%           |
-| 9       | 6135               | 96.37%           | 72.88%           | 88.89%           | 92.49%           |
-| 10      | 6104               | 96.37%           | 74.58%           | 83.33%           | 92.25%           |
-| 11      | 6184               | 96.37%           | 76.27%           | 80.56%           | 92.25%           |
-| 12      | 6112               | 96.07%           | 76.27%           | 80.56%           | 92.02%           |
+| 1 | 7355 | 95.77% | 59.32% | 83.33% | 89.67% |
+| 2 | 7086 | 95.77% | 59.32% | 83.33% | 89.67% |
+| 3 | 7059 | 95.77% | 62.71% | 83.33% | 90.14% |
+| 4 | 7085 | 96.07% | 62.71% | 83.33% | 90.38% |
+| 5 | 7140 | 96.07% | 62.71% | 83.33% | 90.38% |
+| 6 | 7060 | 95.77% | 64.41% | 83.33% | 90.38% |
+| 7 | 7054 | 96.37% | 62.71% | 83.33% | 90.61% |
+| 8 | 7075 | 96.98% | 57.63% | 83.33% | 90.38% |
+| 9 | 7041 | 96.68% | 55.93% | 77.78% | 89.44% |
+
+**Using Euclidean Distance and Weighted Sum with 5 Features**
+
+| K-Value | Execution Time (ms) | Class 1 Accuracy | Class 2 Accuracy | Class 3 Accuracy | Overall Accuracy |
+|---------|---------------------|------------------|------------------|------------------|------------------|
+| 1 | 6584 | 96.98% | 83.05% | 88.89% | 94.37% |
+| 2 | 6093 | 96.98% | 83.05% | 88.89% | 94.37% |
+| 3 | 6133 | 94.56% | 77.97% | 91.67% | 92.02% |
+| 4 | 6238 | 96.37% | 76.27% | 83.33% | 92.49% |
+| 5 | 6185 | 96.98% | 77.97% | 83.33% | 93.19% |
+| 6 | 6113 | 96.68% | 77.97% | 83.33% | 92.96% |
+| 7 | 6093 | 96.37% | 77.97% | 88.89% | 93.19% |
+| 8 | 6136 | 95.77% | 77.97% | 83.33% | 92.25% |
+| 9 | 6135 | 96.37% | 72.88% | 88.89% | 92.49% |
+| 10 | 6104 | 96.37% | 74.58% | 83.33% | 92.25% |
+| 11 | 6184 | 96.37% | 76.27% | 80.56% | 92.25% |
 
 
 (Note: The full table for the 5-features set is shortened for brevity.)
