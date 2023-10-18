@@ -87,7 +87,7 @@ Based on the data at hand, **`k = 166`** would be the choice for maximum accurac
 
 **Using Euclidean Distance and Weighted Sum with 5 Features**
 
-| K-Value | Execution Time (ms) | Class 1 Accuracy | Class 2 Accuracy | Class 3 Accuracy | Overall Accuracy |
+| K-Value | Execution Time (ms) | Normal Accuracy | Suspect  Accuracy | Pathological Accuracy | Overall Accuracy |
 |---------|---------------------|------------------|------------------|------------------|------------------|
 | 1 | 6584 | 96.98% | 83.05% | 88.89% | 94.37% |
 | 2 | 6093 | 96.98% | 83.05% | 88.89% | 94.37% |
