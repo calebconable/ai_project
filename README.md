@@ -10,6 +10,14 @@ The selected algorithms for this task are unsupervised k-NN (k-Nearest Neighbors
 - k-Means
 - Unsupervised k-NN
 
+---
+## Attributes / Features to Include for optimization
+Features: 
+- prolonged_decelerations
+- abnormal_short_term_variability
+- percentage_of_time_with_abnormal_long_term_variability
+- accelerations
+- fetal_health
 
 ---
 ### **Analysis of k-values for k-Means Algorithm**
