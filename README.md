@@ -18,7 +18,7 @@ When deciding on the best **`k`** for k-means clustering, it's crucial to consid
 
 ### Class-Wise Accuracy:
 
-| K-Value | Class 1 Accuracy | Class 2 Accuracy | Class 3 Accuracy | Overall Accuracy |
+| K-Value | Normal Accuracy | Suspect  Accuracy | Pathological Accuracy | Overall Accuracy |
 |---------|------------------|------------------|------------------|------------------|
 | 1       | 100.00%          | 0.00%            | 0.00%            | 77.70%           |
 | 2       | 91.84%           | 61.02%           | 0.00%            | 79.81%           |
@@ -73,7 +73,7 @@ Based on the data at hand, **`k = 166`** would be the choice for maximum accurac
 
 **Using Euclidean Distance and Weighted Sum (Full Feature Set)**
 
-| K-Value | Execution Time (ms) | Class 1 Accuracy | Class 2 Accuracy | Class 3 Accuracy | Overall Accuracy |
+| K-Value | Execution Time (ms) | Normal Accuracy | Suspect  Accuracy | Pathological Accuracy | Overall Accuracy |
 |---------|---------------------|------------------|------------------|------------------|------------------|
 | 1 | 7355 | 95.77% | 59.32% | 83.33% | 89.67% |
 | 2 | 7086 | 95.77% | 59.32% | 83.33% | 89.67% |
