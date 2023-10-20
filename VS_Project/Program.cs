@@ -28,7 +28,11 @@ namespace VS_Project
         {
             RunConsoleTestApp(() =>
             {
-                kMeansCaleb.TestRun(30, 50, n:.10f);
+                kMeans.New(166)
+                .TraingModel_UntilConversion(0.10f)
+                .SaveModel();
+
+                // kMeans.TestRun(1, 30, n:.10f);
                 // KNN.TestDifferentKValues(1, 2);
             });
             Application.EnableVisualStyles();
@@ -74,7 +78,7 @@ namespace VS_Project
         static void PrintRowsClassification()
         {
             int rowId = 0;
-            foreach (var sample in Classification.TestSamples.Values)
+            foreach (var sample in Classification.TestSamples)
             {
                 var cellValue = sample.GetPredefinedClass();
                 Console.WriteLine($"Classification Row ID: {rowId++} => {cellValue}");

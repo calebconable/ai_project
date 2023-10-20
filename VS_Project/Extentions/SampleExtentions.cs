@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VS_Project.Model;
 using VS_Project.Singletone;
 
 namespace AI_Masters_Project
@@ -13,6 +14,11 @@ namespace AI_Masters_Project
         public static int GetPredefinedClass(this ObjectSeries<string> sample)
         {
             return sample.TryGetAs<int>("fetal_health").Value;
+        }
+
+        public static List<Sample> ToSampleList(this Frame<int, string> df)
+        {
+            return df.Rows.Values.Select(v => new Sample(v)).ToList();
         }
 
         public static ObjectSeries<string> ToObjectSeries<T>(this Series<string, T> series)
@@ -25,24 +31,20 @@ namespace AI_Masters_Project
             return objectSeries.SelectValues(v => converter(v));
         }
 
-        public static Series<string, double> CalculateAverage(this List<ObjectSeries<string>> listOfObjectSeries)
+        public static CPoint CalculateAverage(this List<Sample> listOfObjectSeries)
         {
-            // Convert the list of ObjectSeries to a Frame
-            List<KeyValuePair<string, double>> series = new List<KeyValuePair<string, double>>();
-            if(!listOfObjectSeries.Any())
-                return new Series<string, double>(
-                series
-            );
-            foreach (var attribute in listOfObjectSeries.FirstOrDefault().Keys)
-            {
-                double average = listOfObjectSeries.Average(x => Convert.ToDouble(x[attribute]));
+            if (!listOfObjectSeries.Any())
+                return CPoint.Empty(new string[0]);
 
-                series.Add(new KeyValuePair<string, double>(attribute, average));
+            var features = listOfObjectSeries.FirstOrDefault().GetFeatures();
+            CPoint cPoint = CPoint.Empty(features);
+            foreach (string feature in features)
+            {
+                double average = listOfObjectSeries.Average(sample => Convert.ToDouble(sample[feature]));
+                cPoint = cPoint.ModifyFeatureValue(feature, average);
             }
 
-            return new Series<string, double>(
-                series
-            );
+            return cPoint;
         }
 
         /// <summary>
@@ -53,6 +55,7 @@ namespace AI_Masters_Project
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentException"></exception>
+        public static double EuclideanDistance(this Sample sample1, Sample sample2) => EuclideanDistance(sample1.ToObjectSeries(), sample2.ToObjectSeries());
         public static double EuclideanDistance(this ObjectSeries<string> sample1, ObjectSeries<string> sample2)
         {
             if (sample1 == null || sample2 == null)

@@ -1,10 +1,12 @@
-﻿using Deedle;
+﻿using AI_Masters_Project;
+using Deedle;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VS_Project.Extentions;
+using VS_Project.Model;
 
 namespace VS_Project.Singletone
 {
@@ -20,8 +22,8 @@ namespace VS_Project.Singletone
         {
             DataExtentions.IncludeAttributes(df, ATTREBUTES_TO_INCLUDE);
         });
-        public static RowSeries<int, string> TrainingSamples => TrainingSet.Rows;
-        public static RowSeries<int, string> TestSamples => TestSet.Rows;
+        public static List<Sample> TrainingSamples => TrainingSet.ToSampleList();
+        public static List<Sample> TestSamples => TestSet.ToSampleList();
         public int PredefinedClass { get; private set; }
         public int PredictedClass { get; private set; }
         public bool IsCorrectlyClassified => PredictedClass == PredefinedClass;

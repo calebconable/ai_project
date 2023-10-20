@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nkySd5o2gcop6Amzt9RkDngss9t9B32y8xbULGg1YygC7DGMaEAsZF7h6dxK6W4C41l4WRq35tzysp4zoJRyzA==",
+  "dgSpecHash": "LVyu0Xyk43M6/GPWLHkYmnq+/T2LyPjfPWbAwKWtnCqCfi3cS+vQrPZVhJD7KbHJqNSeGNcMf6FHMs/9FCn40w==",
   "success": true,
   "projectFilePath": "E:\\NewDocuments\\AI_MAIN_PROJECT\\ai_project\\VS_Project\\VS_Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\caleb\\.nuget\\packages\\deedle\\3.0.0\\deedle.3.0.0.nupkg.sha512",
     "C:\\Users\\caleb\\.nuget\\packages\\fsharp.core\\4.5.2\\fsharp.core.4.5.2.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\caleb\\.nuget\\packages\\scottplot\\4.1.68\\scottplot.4.1.68.nupkg.sha512",
     "C:\\Users\\caleb\\.nuget\\packages\\scottplot.winforms\\4.1.68\\scottplot.winforms.4.1.68.nupkg.sha512",
     "C:\\Users\\caleb\\.nuget\\packages\\system.drawing.common\\4.7.2\\system.drawing.common.4.7.2.nupkg.sha512",

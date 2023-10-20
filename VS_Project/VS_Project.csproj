@@ -46,10 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Algorithms\kMeansCaleb.cs" />
+    <Compile Include="Algorithms\kMeans.cs" />
     <Compile Include="Algorithms\KNN.cs" />
     <Compile Include="Extentions\ClassificationExtentions.cs" />
+    <Compile Include="Extentions\Converters\CPointJsonConverter.cs" />
+    <Compile Include="Extentions\Converters\SampleJsonConverter.cs" />
+    <Compile Include="Extentions\CPointExtentions.cs" />
     <Compile Include="Extentions\DoubleExtensions.cs" />
+    <Compile Include="Extentions\FileExtentions.cs" />
     <Compile Include="Extentions\SampleExtentions.cs" />
     <Compile Include="Extentions\DataExtentions.cs" />
     <Compile Include="Forms\MainForm.cs">
@@ -64,11 +68,13 @@
     <Compile Include="Forms\KMeansForm.Designer.cs">
       <DependentUpon>KMeansForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Algorithms\KMeans.cs" />
     <Compile Include="Model\Matrix.cs" />
+    <Compile Include="Model\CPoint.cs" />
+    <Compile Include="Model\Sample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singletone\Classification.cs" />
+    <Compile Include="Singletone\JsonSerializerSignletone.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +110,9 @@
     <PackageReference Include="Deedle">
       <Version>3.0.0</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
     <PackageReference Include="ScottPlot">
       <Version>4.1.68</Version>
     </PackageReference>
@@ -111,6 +120,27 @@
       <Version>4.1.68</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AI_Models\kMeans\" />
+    <Folder Include="AI_Models\kNN\" />
+    <Folder Include="AI_Models\OD\" />
+    <Folder Include="AI_Models\RF\" />
+    <Folder Include="AI_Models\RNN\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="AI_Models\kMeans\2023-10-20_05-49-43 (Model k = 0).json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AI_Models\kMeans\2023-10-20_05-53-37 (Model k = 0).json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AI_Models\kMeans\2023-10-20_05-56-23 (Model k = 166).json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>
