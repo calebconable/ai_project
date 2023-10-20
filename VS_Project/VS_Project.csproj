@@ -120,27 +120,6 @@
       <Version>4.1.68</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AI_Models\kMeans\" />
-    <Folder Include="AI_Models\kNN\" />
-    <Folder Include="AI_Models\OD\" />
-    <Folder Include="AI_Models\RF\" />
-    <Folder Include="AI_Models\RNN\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <Content Include="AI_Models\kMeans\2023-10-20_05-49-43 (Model k = 0).json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AI_Models\kMeans\2023-10-20_05-53-37 (Model k = 0).json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AI_Models\kMeans\2023-10-20_05-56-23 (Model k = 166).json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 </Project>

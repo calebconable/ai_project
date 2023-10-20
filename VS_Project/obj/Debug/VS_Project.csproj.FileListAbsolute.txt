@@ -104,5 +104,3 @@ E:\NewDocuments\AI_MAIN_PROJECT\ai_project\VS_Project\obj\Debug\VS_Project.cspro
 E:\NewDocuments\AI_MAIN_PROJECT\ai_project\VS_Project\obj\Debug\VS_Project.exe
 E:\NewDocuments\AI_MAIN_PROJECT\ai_project\VS_Project\obj\Debug\VS_Project.pdb
 E:\NewDocuments\AI_MAIN_PROJECT\ai_project\VS_Project\bin\Debug\Newtonsoft.Json.dll
-E:\NewDocuments\AI_MAIN_PROJECT\ai_project\VS_Project\bin\Debug\AI_Models\kMeans\2023-10-20_05-49-43 (Model k = 0).json
-E:\NewDocuments\AI_MAIN_PROJECT\ai_project\VS_Project\bin\Debug\AI_Models\kMeans\2023-10-20_05-53-37 (Model k = 0).json

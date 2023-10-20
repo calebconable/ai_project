@@ -28,9 +28,12 @@ namespace VS_Project
         {
             RunConsoleTestApp(() =>
             {
-                kMeans.New(166)
-                .TraingModel_UntilConversion(0.10f)
-                .SaveModel();
+                var kmeans = kMeans.New(3);
+                Task.Run(async () =>
+                {
+                    await kmeans.TraingModel_UntilConversionAsync(0.10f);
+                    kmeans.SaveModel();
+                });
 
                 // kMeans.TestRun(1, 30, n:.10f);
                 // KNN.TestDifferentKValues(1, 2);

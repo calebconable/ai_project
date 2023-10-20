@@ -42,10 +42,12 @@ namespace VS_Project.Extentions
 
         public static void SaveFile(string folder, string fileName, string content)
         {
-            var folderPath = Path.GetFullPath($"../../AI_Models/{folder}");
+            Directory.CreateDirectory($"../../../Knowledge Base/{folder}");
+            var folderPath = Path.GetFullPath($"../../../Knowledge Base/{folder}");
             var filePath = Path.Combine(folderPath, fileName);
-            SaveFile(folder, filePath);
+            //SaveFile(folder, filePath);
             File.WriteAllText(filePath, content);
+            Console.WriteLine($"Saved knowledgebase to path: {filePath}");
         }
     }
 }

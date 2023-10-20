@@ -1,0 +1,389 @@
+{
+  "Centroids": [
+    {
+      "ID": "7b991ee7-a5d4-47e3-8b18-ee53342b4d2e",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 48.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 68.0,
+        "fetal_health": 2.0
+      }
+    },
+    {
+      "ID": "68ebe5f7-10eb-4e3c-a87f-39736a9f3a7d",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.000166666665,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 74.25,
+        "percentage_of_time_with_abnormal_long_term_variability": 31.583334,
+        "fetal_health": 1.75
+      }
+    },
+    {
+      "ID": "44af30b2-aa9e-4dd7-8862-c6b8d55a6e3a",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.00566824665,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 49.7251167,
+        "percentage_of_time_with_abnormal_long_term_variability": 0.6445498,
+        "fetal_health": 1.05213273
+      }
+    },
+    {
+      "ID": "8027677d-b113-40fa-8b7c-99cbf63de73c",
+      "ClustersClass": 3,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 76.8,
+        "percentage_of_time_with_abnormal_long_term_variability": 86.4,
+        "fetal_health": 3.0
+      }
+    },
+    {
+      "ID": "f45444ec-47f8-4e56-a73b-dce23221d25d",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.002,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 25.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 35.0,
+        "fetal_health": 1.0
+      }
+    },
+    {
+      "ID": "7741bfa1-a3a4-4830-be5e-f29f2ebf9e3e",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.000478260859,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 62.2608681,
+        "percentage_of_time_with_abnormal_long_term_variability": 25.956522,
+        "fetal_health": 1.73913038
+      }
+    },
+    {
+      "ID": "6ded09cc-ba73-4c68-9384-f84e921ec994",
+      "ClustersClass": 3,
+      "Point": {
+        "accelerations": 0.00142857141,
+        "prolongued_decelerations": 0.000857142848,
+        "abnormal_short_term_variability": 78.42857,
+        "percentage_of_time_with_abnormal_long_term_variability": 2.21428561,
+        "fetal_health": 2.21428561
+      }
+    },
+    {
+      "ID": "1a5476da-224c-4395-841d-ed3130500014",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.00130434788,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 44.608696,
+        "percentage_of_time_with_abnormal_long_term_variability": 31.869566,
+        "fetal_health": 1.04347825
+      }
+    },
+    {
+      "ID": "a99f1d30-1ffe-44ec-9b60-4a63c650002f",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.0009090909,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 45.9090919,
+        "percentage_of_time_with_abnormal_long_term_variability": 43.0909081,
+        "fetal_health": 1.09090912
+      }
+    },
+    {
+      "ID": "c5af30a4-11b5-4cec-8b2a-224c5c25e781",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.001,
+        "prolongued_decelerations": 0.000117647061,
+        "abnormal_short_term_variability": 58.14706,
+        "percentage_of_time_with_abnormal_long_term_variability": 15.2941179,
+        "fetal_health": 1.52941179
+      }
+    },
+    {
+      "ID": "15421868-602a-4fcb-9175-730fd959cd3e",
+      "ClustersClass": 3,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 81.75,
+        "percentage_of_time_with_abnormal_long_term_variability": 30.5,
+        "fetal_health": 2.5
+      }
+    },
+    {
+      "ID": "bda00b8f-f4bb-4374-800e-ca6e820a839e",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 75.22222,
+        "percentage_of_time_with_abnormal_long_term_variability": 62.22222,
+        "fetal_health": 1.88888884
+      }
+    },
+    {
+      "ID": "ecd0573f-61ef-43b0-a661-bfa334ec0a12",
+      "ClustersClass": 3,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 66.4545441,
+        "percentage_of_time_with_abnormal_long_term_variability": 71.09091,
+        "fetal_health": 2.590909
+      }
+    },
+    {
+      "ID": "45e1c98c-d40e-4999-a638-1bf8bf4003ec",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 50.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 60.3333321,
+        "fetal_health": 1.66666663
+      }
+    },
+    {
+      "ID": "68cdcdf5-6dd0-497e-b33b-1184c4be29e0",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.0015,
+        "prolongued_decelerations": 5.882353E-05,
+        "abnormal_short_term_variability": 28.1176472,
+        "percentage_of_time_with_abnormal_long_term_variability": 13.0,
+        "fetal_health": 1.0
+      }
+    },
+    {
+      "ID": "e1c0fce3-b85e-4f22-8e50-7392c28dc408",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.000923076936,
+        "prolongued_decelerations": 7.69230755E-05,
+        "abnormal_short_term_variability": 54.0961533,
+        "percentage_of_time_with_abnormal_long_term_variability": 8.711538,
+        "fetal_health": 1.26923072
+      }
+    },
+    {
+      "ID": "54e5b9ba-97e8-4dd6-9757-fba87623c829",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.002,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 40.24138,
+        "percentage_of_time_with_abnormal_long_term_variability": 9.293103,
+        "fetal_health": 1.06896555
+      }
+    },
+    {
+      "ID": "5fd18fb0-2d0b-47a6-804f-e8d25d7028e0",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.004901695,
+        "prolongued_decelerations": 0.000152542372,
+        "abnormal_short_term_variability": 34.8644066,
+        "percentage_of_time_with_abnormal_long_term_variability": 0.5084746,
+        "fetal_health": 1.101695
+      }
+    },
+    {
+      "ID": "18abba04-0f68-4597-89cd-c27b53758ade",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.00330364378,
+        "prolongued_decelerations": 0.0003805668,
+        "abnormal_short_term_variability": 60.34818,
+        "percentage_of_time_with_abnormal_long_term_variability": 0.279352218,
+        "fetal_health": 1.388664
+      }
+    },
+    {
+      "ID": "fc5a1c34-6509-42d7-bfd3-519aa64aca0c",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0005,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 60.11111,
+        "percentage_of_time_with_abnormal_long_term_variability": 44.88889,
+        "fetal_health": 1.55555558
+      }
+    },
+    {
+      "ID": "099dbc6f-a7cf-4547-9952-694b2b4b13f3",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.00207142858,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 74.64286,
+        "percentage_of_time_with_abnormal_long_term_variability": 11.8571424,
+        "fetal_health": 1.14285719
+      }
+    },
+    {
+      "ID": "f2792ee5-4a31-4691-ac8d-0b294958c380",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 6.666667E-05,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 73.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 44.3333321,
+        "fetal_health": 1.93333328
+      }
+    },
+    {
+      "ID": "494d657d-d2e6-40f2-ad8c-c40ae776657d",
+      "ClustersClass": 3,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 78.2,
+        "percentage_of_time_with_abnormal_long_term_variability": 73.1,
+        "fetal_health": 2.6
+      }
+    },
+    {
+      "ID": "4f9a3d30-ec78-441a-84fa-b9a0677710d0",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 61.85,
+        "percentage_of_time_with_abnormal_long_term_variability": 57.85,
+        "fetal_health": 1.7
+      }
+    },
+    {
+      "ID": "1ac770f4-b07b-4743-919b-00ef0d5204fc",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.000166666665,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 78.0833359,
+        "percentage_of_time_with_abnormal_long_term_variability": 22.916666,
+        "fetal_health": 1.58333337
+      }
+    },
+    {
+      "ID": "b2cbff21-9ff2-474b-b3e1-4e16325ef842",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.001663158,
+        "prolongued_decelerations": 0.000526315765,
+        "abnormal_short_term_variability": 66.46316,
+        "percentage_of_time_with_abnormal_long_term_variability": 2.14736843,
+        "fetal_health": 1.61052632
+      }
+    },
+    {
+      "ID": "5e9e1325-329c-4fd2-92db-70913c9fedb3",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 74.5,
+        "percentage_of_time_with_abnormal_long_term_variability": 55.5833321,
+        "fetal_health": 1.91666663
+      }
+    },
+    {
+      "ID": "bb6f8fa3-c279-486a-afe9-dc05d621ef72",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.00173529412,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 43.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 19.5882359,
+        "fetal_health": 1.29411769
+      }
+    },
+    {
+      "ID": "8d6c3c47-e1d2-4e2d-ae69-af5c2e6c057a",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.000117647061,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 64.23529,
+        "percentage_of_time_with_abnormal_long_term_variability": 35.64706,
+        "fetal_health": 2.0
+      }
+    },
+    {
+      "ID": "954a61a9-7320-4228-a932-2c7b437942e6",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0005,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 79.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 38.5,
+        "fetal_health": 2.125
+      }
+    },
+    {
+      "ID": "628edaa6-3e81-495d-a91a-8af39f2eb1f0",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 80.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 50.25,
+        "fetal_health": 2.0
+      }
+    },
+    {
+      "ID": "3123567e-c4d4-4547-bcd1-78a091793fdf",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.000384615385,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 56.0,
+        "percentage_of_time_with_abnormal_long_term_variability": 33.3076935,
+        "fetal_health": 1.30769229
+      }
+    },
+    {
+      "ID": "a4ae0940-f60d-407e-b037-a401420e86aa",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.00416403776,
+        "prolongued_decelerations": 0.000164037861,
+        "abnormal_short_term_variability": 22.7665615,
+        "percentage_of_time_with_abnormal_long_term_variability": 0.211356461,
+        "fetal_health": 1.03785491
+      }
+    },
+    {
+      "ID": "8dc76247-00d7-4f51-936b-bbe7ee7caeb9",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.0004,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 46.8,
+        "percentage_of_time_with_abnormal_long_term_variability": 52.8,
+        "fetal_health": 1.2
+      }
+    },
+    {
+      "ID": "4e1bd9c6-c843-4d11-802b-9677aa959d5a",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 67.57143,
+        "percentage_of_time_with_abnormal_long_term_variability": 19.47619,
+        "fetal_health": 2.0
+      }
+    }
+  ]
+}

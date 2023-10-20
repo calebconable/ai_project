@@ -46,8 +46,7 @@ namespace VS_Project.Model
             List<KeyValuePair<string, double>> series = new List<KeyValuePair<string, double>>();
             foreach (var attribute in features)
             {
-                attributeMax.Add(attribute, 0);
-                attributeMin.Add(attribute, 0);
+                series.Add(new KeyValuePair<string, double>(attribute, 0));
             }
             return new CPoint(new Series<string, double>(series).ToObjectSeries());
         }

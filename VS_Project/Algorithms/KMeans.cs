@@ -38,7 +38,7 @@ namespace VS_Project.Algorithms
             var formattedDateTime = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"); // date and time with safe characters
             var fileName = $"{formattedDateTime} (Model k = {K}).json"; // using .json extension
             string jsonContent = JsonConvert.SerializeObject(this, JsonSerializerSignletone.SETTINGS);
-            FileExtentions.SaveFile("kMeans", fileName, jsonContent);
+            FileExtentions.SaveFile(nameof(kMeans), fileName, jsonContent);
         }
 
         public static void TestRun(int kStart, int kEnd, float n)
@@ -49,20 +49,20 @@ namespace VS_Project.Algorithms
                 kMeans kkMeans;
                 for (int k = kStart; k <= kEnd; k++)
                 {
-                    // Console.WriteLine($"Test kMeans Alogirthm, Classification, k = {k}");
+                    Console.WriteLine($"Test kMeans Alogirthm, Classification, k = {k}");
                     kkMeans = kMeans.New(k);
                     Stopwatch stopwatch = Stopwatch.StartNew();
                     await kkMeans.TraingModel_UntilConversionAsync(n);
                     var classifications = await kkMeans.ClassifyAsync(Classification.TestSet);
                     stopwatch.Stop();
-                    // Console.WriteLine(new string('=', 100));
-                    // Console.WriteLine($"K: {k} Time: {stopwatch.ElapsedMilliseconds}ms \n" + classifications.ConfusionMatrixAndAccuracy());
+                    Console.WriteLine(new string('=', 100));
+                    Console.WriteLine($"K: {k} Time: {stopwatch.ElapsedMilliseconds}ms \n" + classifications.ConfusionMatrixAndAccuracy());
                     if(choice.accuracy < classifications.DetermineAccuracy().Average(x => x.accuracy))
                     {
                         choice = (k, classifications.DetermineAccuracy().Average(x => x.accuracy), classifications);
                     }
                     Console.WriteLine($"Done with k = {k}, Time: {stopwatch.ElapsedMilliseconds} ms,\nLeader: {choice.k}\n{choice.classifications.ConfusionMatrixAndAccuracy()}");
-                    // Console.WriteLine(new string('=', 100));
+                    Console.WriteLine(new string('=', 100));
                 }
                 Console.WriteLine($"\nBest k = {choice.k} " + choice.classifications.ConfusionMatrixAndAccuracy());
             });
@@ -81,7 +81,7 @@ namespace VS_Project.Algorithms
 
         private void InitClusters(int k)
         {
-            // Console.WriteLine("Initializing centroids...");
+            Console.WriteLine("Initializing centroids...");
             Centroids = new Centroid[k];
             for (int i = 0; i < k; i++)
             {
@@ -94,7 +94,7 @@ namespace VS_Project.Algorithms
             Task.Run(async () =>
             {
                 await TraingModel_UntilConversionAsync(conversionValue);
-            }).GetAwaiter();
+            }).Wait();
             return this;
         }
         public async Task TraingModel_UntilConversionAsync(double conversionValue)
@@ -116,7 +116,7 @@ namespace VS_Project.Algorithms
         {
             // Assing each centroid to nearby datapoints
             while (n-- > 0){
-                // Console.WriteLine($"N = {n + 1}");
+                Console.WriteLine($"N = {n + 1}");
                 await RecomputeCentroidAsync();
             }
         }
@@ -127,7 +127,7 @@ namespace VS_Project.Algorithms
             {
                 centroid.AssignedDataPoints.Clear();
             });
-            // Console.WriteLine("Create tasks for assigning points to centroids...");
+            Console.WriteLine("Create tasks for assigning points to centroids...");
             List<Task> assignPointsToCentroidTasks = new List<Task>(SampleSpace.Length);
             foreach (var point in SampleSpace) 
             {
@@ -143,26 +143,42 @@ namespace VS_Project.Algorithms
                 }));
             }
 
-            // Console.WriteLine("Assigning Points To Centroids....");
+
+            Console.WriteLine("Assigning Points To Centroids....");
             await Task.WhenAll(assignPointsToCentroidTasks);
             assignPointsToCentroidTasks.Clear();
-            // Console.WriteLine("Done");
+            Console.WriteLine("Done");
 
-            // Console.WriteLine("Recompute Centroids....");
+            var unAssignedCentroids = Centroids.Where(x => !x.AssignedDataPoints.Any()).ToList();
+
+            if (unAssignedCentroids.Any())
+            {
+                // Console.WriteLine($"Have to reInit {unAssignedCentroids.Count} centroids");
+                unAssignedCentroids.ForEach(centroid =>
+                {
+                    // // Console.WriteLine($"Init call on {centroid.ID}");
+                    centroid.Init();
+
+                });
+                return await RecomputeCentroidAsync();
+            }
+
+
+            Console.WriteLine("Recompute Centroids....");
             List<Task<double>> recomputeCentroidsTasks = new List<Task<double>>(Centroids.Length);
             foreach (var centroid in Centroids)
             {
                 recomputeCentroidsTasks.Add(centroid.RecomputeValue());
             }
             double[] results = await Task.WhenAll(recomputeCentroidsTasks);
-            // Console.WriteLine("Done");
+            Console.WriteLine("Done");
 
             for (int i = 0; i < results.Length; i++)
             {
-                // // Console.WriteLine($"Cluster {i + 1}, abs differece = {results[i]}");
+                // Console.WriteLine($"Cluster {i + 1}, abs differece = {results[i]}");
             }
             recomputeCentroidsTasks.Clear();
-            // // Console.WriteLine($"Clusters abs SUM differece = {results.Sum()}");
+            // Console.WriteLine($"Clusters abs SUM differece = {results.Sum()}");
             return results.Sum();
         }
 
@@ -172,7 +188,7 @@ namespace VS_Project.Algorithms
             // Check which centroid is closest to the point
             foreach (var centroid in Centroids)
             {
-                double distanceToCentroid = point.GetDistance(centroid.Point);
+                double distanceToCentroid = point.GetDistanceToCentroid(centroid);
                 if (distanceToCentroid < closestCentroid.distance)
                 {
                     closestCentroid = (centroid, distanceToCentroid);
@@ -238,7 +254,9 @@ namespace VS_Project.Algorithms
                 if (AssignedDataPoints[i] == null)
                     AssignedDataPoints.RemoveAt(i);
             }
-            return AssignedDataPoints.Where(x => x != null).ToList().CalculateAverage().ToCPoint();
+            if(AssignedDataPoints.Any())
+                return AssignedDataPoints.CalculateAverage();
+            return Point;
         }
 
         public CPoint GetCentroidValueByMedoids()
@@ -276,6 +294,8 @@ namespace VS_Project.Algorithms
 
         public int GetClustersClass()
         {
+            if (!AssignedDataPoints.Any())
+                return 0;
             var @class = AssignedDataPoints
             .GroupBy(point => point.PredifinedClassValue)
             .OrderByDescending(group => group.Count())
@@ -296,6 +316,10 @@ namespace VS_Project.Algorithms
                 AssignedDataPoints.Add(point);
             }
         }
- 
+
+        internal void Init()
+        {
+            Point = CPoint.Random(Classification.ATTREBUTES_TO_INCLUDE);
+        }
     }
 }

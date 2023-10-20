@@ -24,7 +24,13 @@ namespace VS_Project.Model
 
         public double GetDistanceToCentroid(Centroid cluster)
         {
-            return SampleExtention.EuclideanDistance(this, (Sample)cluster.Point.ToObjectSeries());
+            try
+            {
+                return SampleExtention.EuclideanDistance(this, cluster.Point.ToObjectSeries());
+            }catch(ArgumentException ex)
+            {
+                return double.MaxValue;
+            }
         }
 
         public Dictionary<string, object> ToJson()

@@ -1,0 +1,37 @@
+{
+  "Centroids": [
+    {
+      "ID": "ea053e0f-78fe-4ae1-918c-d384426e660e",
+      "ClustersClass": 2,
+      "Point": {
+        "accelerations": 0.0003018018,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 63.9459457,
+        "percentage_of_time_with_abnormal_long_term_variability": 40.26126,
+        "fetal_health": 1.67117119
+      }
+    },
+    {
+      "ID": "81359733-3ca7-4301-82f5-f8b8a87504c1",
+      "ClustersClass": 3,
+      "Point": {
+        "accelerations": 0.0,
+        "prolongued_decelerations": 0.0,
+        "abnormal_short_term_variability": 72.78723,
+        "percentage_of_time_with_abnormal_long_term_variability": 76.42553,
+        "fetal_health": 2.72340417
+      }
+    },
+    {
+      "ID": "a05e558a-5ffa-46c9-a4bf-313b77b25819",
+      "ClustersClass": 1,
+      "Point": {
+        "accelerations": 0.00371139054,
+        "prolongued_decelerations": 0.000183787561,
+        "abnormal_short_term_variability": 43.5408821,
+        "percentage_of_time_with_abnormal_long_term_variability": 2.8371768,
+        "fetal_health": 1.19986022
+      }
+    }
+  ]
+}
