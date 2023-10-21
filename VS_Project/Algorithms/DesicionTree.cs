@@ -11,8 +11,9 @@ using VS_Project.Singletone;
 
 namespace VS_Project.Algorithms
 {
-    public class DesicionTree
+    public class DesicionTree : IAlgorithm
     {
+        public Guid ID = Guid.NewGuid();
         public double GiniImpuritySignificantDescreaseThreshold { get; set; }
         public int MaxTreeDepth { get; set; }
         public int MinSampleSizePerLeaf { get; set; }
@@ -27,10 +28,7 @@ namespace VS_Project.Algorithms
             };
         }  
 
-        public void Open()
-        {
-
-        }
+        public static DesicionTree Open() => FileExtentions.LoadModelDynamic<DesicionTree>(nameof(DesicionTree));
         public void Save()
         {
             var formattedDateTime = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"); // date and time with safe characters
@@ -47,7 +45,7 @@ namespace VS_Project.Algorithms
             return features.ToRandomStrings(randFeatureSize).ToArray();
         }
 
-        public void BuildTree(int maxTreeDepth, int minSampleSizePerLeaf, double giniImpuritySignificantDescreaseThreshold = double.NaN)
+        public void BuildTree(int maxTreeDepth, int minSampleSizePerLeaf, double giniImpuritySignificantDescreaseThreshold = double.NaN, Action doneAction = null)
         {
             GiniImpuritySignificantDescreaseThreshold = giniImpuritySignificantDescreaseThreshold;
             MaxTreeDepth = maxTreeDepth;
@@ -56,14 +54,16 @@ namespace VS_Project.Algorithms
             RootNode = Node.NewRoot(BootstrapSample);
             string[] selectedFeatures = RandomFeatures();
             RootNode.CreateSplits(selectedFeatures, StopCriteria);
+
             Thread thed = new Thread(() =>
             {
-                while (Node.ActiveNodes.Count > 0)
+                while (Node.ActiveNodesCount == 0) ;
+                while (Node.ActiveNodesCount > 0)
                 {
-                    Console.WriteLine($"{Node.ActiveNodes.Count} active nodes...");
+                    // Console.WriteLine($"Decision Tree ({ID}) has {Node.ActiveNodesCount} active nodes...");
                     Thread.Sleep(1000);
                 }
-                Save();
+                doneAction?.Invoke();
             });
             thed.Start();
         }
@@ -77,6 +77,20 @@ namespace VS_Project.Algorithms
             else if(nodeSize <= MinSampleSizePerLeaf)
                 return true;
             return false;
+        }
+
+        public async Task<Classification[]> EvaluateAsync(Sample[] testSamples)
+        {
+            List<Task<Classification>> tasks = new List<Task<Classification>>();
+            foreach(Sample testSample in testSamples)
+            {
+                tasks.Add(Task.Run(() =>
+                {
+                    var predictedClass = RootNode.Evaluate(testSample);
+                    return new Classification(testSample.PredifinedClassValue, predictedClass);
+                }));
+            }
+            return await Task.WhenAll(tasks);
         }
     }
 }

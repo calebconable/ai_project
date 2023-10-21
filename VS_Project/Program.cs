@@ -28,8 +28,30 @@ namespace VS_Project
         {
             RunConsoleTestApp(() =>
             {
-                var desicionTree = DesicionTree.New(Classification.TrainingSamples.ToArray());
-                desicionTree.BuildTree(100, 20, 10f);
+
+                /*Task.Run(async () =>
+                {
+
+                    while (true)
+                    {
+                        var randomForest = RandomForest.Open();
+                        var classifications = await randomForest.EvaluateAsync(Classification.TestSamples.ToArray());
+                        Console.WriteLine(classifications.ConfusionMatrixAndAccuracy());
+                    }
+                });*/
+
+                var randomForest = RandomForest.New(3);
+                Task.Run(async () =>
+                {
+                    await randomForest.PerformBootstrapSamplingAsync(Classification.TrainingSamples.ToArray());
+                    randomForest.Build(15, 20, 10f, doneAction: () => { randomForest.Save(); });
+                });
+
+                /*var desicionTree = DesicionTree.New(Classification.TrainingSamples.ToArray());
+                desicionTree.BuildTree(100, 20, 10f, doneAction: () =>
+                {
+                    desicionTree.Save();
+                });*/
 
                 /*var desisionTree = FileExtentions.LoadModelDynamic<DesicionTree>(nameof(DesicionTree));
                 Console.WriteLine(desisionTree.RootNode);*/
@@ -48,7 +70,52 @@ namespace VS_Project
             Application.Run(new MainForm());
         }
 
-        
+        static void Menu()
+        {
+            int algorithmIndex = -1;
+            while (true) {
+                Console.WriteLine("\nChoose a algorithm:");
+                Console.WriteLine("0. kMeans");
+                Console.WriteLine("1. Random Forest");
+                if (int.TryParse(Console.ReadLine(), out algorithmIndex) && algorithmIndex <= 1)
+                {
+                    AlgorithmMenu();
+                }
+                else
+                {
+                    Console.WriteLine("Choose from 0 - 1");
+                }
+
+            }
+        }
+
+        static void AlgorithmMenu()
+        {
+            int choice = -1;
+            while (true)
+            {
+                Console.WriteLine("\nWhat do you want to do?");
+                Console.WriteLine("0. Get Models");
+                Console.WriteLine("1. Train");
+                Console.WriteLine("2. Evaluate");
+                Console.WriteLine("3. Back");
+                if (int.TryParse(Console.ReadLine(), out choice) && choice <= 2)
+                {
+                    switch(choice)
+                    {
+                        case 3:
+                            Console.WriteLine("\n");
+                            return;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Choose from 0 - 1");
+                }
+
+            }
+        }
+
         static void RunConsoleTestApp(Action customActionToRun = null)
         {
             bool consoleAllocated = AllocConsole();

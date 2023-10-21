@@ -62,14 +62,17 @@ namespace VS_Project.Extentions
         public static T LoadModelDynamic<T>(string folder)
         {
             var folderPath = Path.GetFullPath($"../../../Knowledge Base/{folder}");
-            Console.WriteLine($"Choose {folder} model name");
+            Console.WriteLine($"Choose {folder} Model Version");
             int i = 0;
             foreach (var path in Directory.GetFiles(folderPath))
             {
                 Console.WriteLine($"{++i}. {path}");
             }
+            Console.Write($"\nChoice: ");
             var filePath = Directory.GetFiles(folderPath)[int.Parse(Console.ReadLine()) - 1];
             var jsonContent = File.ReadAllText(filePath);
+
+            Console.Write("\n");
             return JsonConvert.DeserializeObject<T>(jsonContent);
         }
     }

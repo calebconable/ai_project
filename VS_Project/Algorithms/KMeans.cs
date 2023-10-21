@@ -16,7 +16,7 @@ using VS_Project.Singletone;
 
 namespace VS_Project.Algorithms
 {
-    public class kMeans
+    public class kMeans : IAlgorithm
     {
         public Centroid[] Centroids { get; set; }
         [JsonIgnore]
@@ -54,7 +54,7 @@ namespace VS_Project.Algorithms
                     kkMeans = kMeans.New(k);
                     Stopwatch stopwatch = Stopwatch.StartNew();
                     await kkMeans.TraingModel_UntilConversionAsync(n);
-                    var classifications = await kkMeans.ClassifyAsync(Classification.TestSet);
+                    var classifications = await kkMeans.EvaluateAsync(Classification.TestSamples.ToArray());
                     stopwatch.Stop();
                     Console.WriteLine(new string('=', 100));
                     Console.WriteLine($"K: {k} Time: {stopwatch.ElapsedMilliseconds}ms \n" + classifications.ConfusionMatrixAndAccuracy());
@@ -200,25 +200,38 @@ namespace VS_Project.Algorithms
         }
         private (Centroid centroid, double distance) ClosestCluster(ObjectSeries<string> point) => ClosestCluster(new Sample(point)); 
 
-        public async Task<IList<Classification>> ClassifyAsync(Frame<int, string> testData)
+
+        private Classification ClassifyTestSample(Sample testSample) // Replace SampleType with the actual type
         {
+            var predefinedClass = testSample.GetPredefinedClass();
+            var predictedClass = ClosestCluster(testSample).centroid.GetClustersClass();
+            return new Classification(predefinedClass, predictedClass);
+        }
+
+        public Classification[] Evaluate(Sample[] testSampels)
+        {
+            List<Classification> classifications = new List<Classification>();
+
+            foreach (var testSample in testSampels)
+            {
+                classifications.Add(ClassifyTestSample(testSample));
+            }
+            return classifications.ToArray();
+        }
+
+        public async Task<Classification[]> EvaluateAsync(Sample[] testSampels)
+        {
+
             List<Task<Classification>> tasks = new List<Task<Classification>>();
 
-            foreach (var testSample in testData.Rows.Values)
+            foreach (var testSample in testSampels)
             {
                 tasks.Add(Task.Run(() => ClassifyTestSample(testSample)));
             }
 
             Classification[] results = await Task.WhenAll(tasks);
 
-            return results.ToList();
-        }
-
-        private Classification ClassifyTestSample(ObjectSeries<string> testSample) // Replace SampleType with the actual type
-        {
-            var predefinedClass = testSample.GetPredefinedClass();
-            var predictedClass = ClosestCluster(testSample).centroid.GetClustersClass();
-            return new Classification(predefinedClass, predictedClass);
+            return results.ToArray();
         }
     }
 

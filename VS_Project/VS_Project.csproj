@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\DesicionTree.cs" />
+    <Compile Include="Help\Interfaces\IAlgorithm.cs" />
     <Compile Include="Algorithms\kMeans.cs" />
     <Compile Include="Algorithms\KNN.cs" />
+    <Compile Include="Algorithms\RandomForest.cs" />
     <Compile Include="Extentions\ClassificationExtentions.cs" />
     <Compile Include="Extentions\Converters\CPointJsonConverter.cs" />
     <Compile Include="Extentions\Converters\SampleJsonConverter.cs" />

@@ -24,13 +24,21 @@ namespace VS_Project.Model
         {
             get => Samples.Length;
         }
+        private int classValue = -1;
         public int? ClassValue
         {
             get
             {
+                if (classValue != -1)
+                    return classValue;
                 if (IsLeaf)
                     return (int)Math.Round(Samples.Average(x => x.PredifinedClassValue));
                 return null;
+            }
+            set
+            {
+                if(value is int val)
+                    classValue = val;
             }
         }
         [JsonIgnore]
@@ -127,12 +135,12 @@ namespace VS_Project.Model
             }
             return possibleThresholds.Select(x => (double)x).ToArray();
         }
-        public static List<Node> ActiveNodes = new List<Node>();
+        public static int ActiveNodesCount = 0;
         public async Task CreateSplits(string[] randomSelectedFeatures, Func<int, double, int, bool> stopCriteria)
         {
             try
             {
-                ActiveNodes.Add(this);
+                ActiveNodesCount++;
                 Console.WriteLine("Splitting the data...");
                 // Prevent splitting if all the samples in node is only one class
                 if (Samples.Select(sample => sample.GetFeatureValue(Classification.CLASS_ATTR_NAME)).Distinct().Count() <= 1)
@@ -211,8 +219,42 @@ namespace VS_Project.Model
             }
             finally
             {
-                ActiveNodes.Remove(this);
+                ActiveNodesCount--;
             }
         }
+
+        public int Evaluate(Sample testSample)
+        {
+            Node currentNode = this;  // Start with the current node as 'this'
+
+            while (currentNode != null)
+            {
+                if (currentNode.IsLeaf || (currentNode.ClassValue != -1 && currentNode.ClassValue != null))
+                {
+                    // This node is a leaf, return the class value
+                    return (int)currentNode.ClassValue;
+                }
+
+                if (currentNode.LSplit != null && testSample.GetFeatureValue(currentNode.LSplit.ConditionFeature) < currentNode.LSplit.ConditionThreshold)
+                {
+                    // Move to the left split
+                    currentNode = currentNode.LSplit;
+                }
+                else if (currentNode.HSplit != null)
+                {
+                    // Move to the right split
+                    currentNode = currentNode.HSplit;
+                }
+                else
+                {
+                    // Handle cases where neither the left nor right split is taken
+                    return -1;
+                }
+            }
+
+            // Return a default value when no condition is met
+            return -1;
+        }
+
     }
 }

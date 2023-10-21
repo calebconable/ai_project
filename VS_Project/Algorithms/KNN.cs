@@ -14,7 +14,7 @@ using VS_Project.Singletone;
 
 namespace VS_Project.Algorithms
 {
-    public class KNN
+    public class KNN : IAlgorithm
     {
         private int K;
         private KNN() { }
@@ -34,7 +34,7 @@ namespace VS_Project.Algorithms
                 {
                     int k = i;
                     Stopwatch stopwatch = Stopwatch.StartNew();
-                    var classifications = await KNN.New().ClassifyAsync(k);
+                    var classifications = await KNN.New().EvaluateAsync(Classification.TestSamples.ToArray());
                     stopwatch.Stop();
                     Console.WriteLine($"K: {k} Time: {stopwatch.ElapsedMilliseconds}ms \n" + classifications.ConfusionMatrixAndAccuracy());
                 }
@@ -51,19 +51,20 @@ namespace VS_Project.Algorithms
             return classifications;
         }
 
-        public async Task<IList<Classification>> ClassifyAsync(int k)
+        public async Task<Classification[]> EvaluateAsync(Sample[] testSamples)
         {
-            K = k;
+            Console.Write("Provide k-NN k value = ");
+            K = int.Parse(Console.ReadLine());  
             List<Task<Classification>> tasks = new List<Task<Classification>>();
 
-            foreach (var testSample in Classification.TestSamples)
+            foreach (var testSample in testSamples)
             {
-                tasks.Add(Task.Run(() => ComputeClassification(testSample, k)));
+                tasks.Add(Task.Run(() => ComputeClassification(testSample, K)));
             }
 
             Classification[] results = await Task.WhenAll(tasks);
 
-            return results.ToList();
+            return results.ToArray();
         }
 
         private Classification ComputeClassification(Sample testSample, int k) // Replace SampleType with the actual type

@@ -8,9 +8,9 @@ namespace VS_Project.Extentions
 {
     public static class ListExtentions
     {
+        static Random random = new Random();
         public static List<string> ToRandomStrings(this List<string> strings, int numToChoose)
         {
-            Random random = new Random();
             List<string> chosenStrings = new List<string>();
 
             // Shuffle the input list to randomize the order
