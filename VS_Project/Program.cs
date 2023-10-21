@@ -28,12 +28,17 @@ namespace VS_Project
         {
             RunConsoleTestApp(() =>
             {
-                var kmeans = kMeans.New(3);
+                var desicionTree = DesicionTree.New(Classification.TrainingSamples.ToArray());
+                desicionTree.BuildTree(100, 20, 10f);
+
+                /*var desisionTree = FileExtentions.LoadModelDynamic<DesicionTree>(nameof(DesicionTree));
+                Console.WriteLine(desisionTree.RootNode);*/
+                /*var kmeans = kMeans.New(3);
                 Task.Run(async () =>
                 {
                     await kmeans.TraingModel_UntilConversionAsync(0.10f);
                     kmeans.SaveModel();
-                });
+                });*/
 
                 // kMeans.TestRun(1, 30, n:.10f);
                 // KNN.TestDifferentKValues(1, 2);

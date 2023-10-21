@@ -1,5 +1,6 @@
 ﻿using AI_Masters_Project;
 using Deedle;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,8 +16,14 @@ namespace VS_Project.Algorithms
 {
     public class KNN
     {
+        private int K;
         private KNN() { }
         public static KNN New() => new KNN();
+
+        public void SaveModel()
+        {
+         
+        }
 
         public static void TestDifferentKValues(int start, int end)
         {
@@ -46,6 +53,7 @@ namespace VS_Project.Algorithms
 
         public async Task<IList<Classification>> ClassifyAsync(int k)
         {
+            K = k;
             List<Task<Classification>> tasks = new List<Task<Classification>>();
 
             foreach (var testSample in Classification.TestSamples)

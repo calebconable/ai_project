@@ -24,6 +24,7 @@ namespace VS_Project.Singletone
         });
         public static List<Sample> TrainingSamples => TrainingSet.ToSampleList();
         public static List<Sample> TestSamples => TestSet.ToSampleList();
+        public static IEnumerable<int> PossibleClassValues => TrainingSet.GetColumnAsList(CLASS_ATTR_NAME).Select(x => (int)double.Parse(x));
         public int PredefinedClass { get; private set; }
         public int PredictedClass { get; private set; }
         public bool IsCorrectlyClassified => PredictedClass == PredefinedClass;

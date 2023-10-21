@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using VS_Project.Algorithms;
 using VS_Project.Singletone;
 
 namespace VS_Project.Extentions
@@ -48,6 +49,28 @@ namespace VS_Project.Extentions
             //SaveFile(folder, filePath);
             File.WriteAllText(filePath, content);
             Console.WriteLine($"Saved knowledgebase to path: {filePath}");
+        }
+
+        public static T LoadModel<T>(string name)
+        {
+            var folderPath = Path.GetDirectoryName($"../../../Knowledge Base/{nameof(T)}");
+            var filePath = Path.Combine(folderPath, $"{name}.json");
+            var jsonContent = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<T>(jsonContent);
+        }
+
+        public static T LoadModelDynamic<T>(string folder)
+        {
+            var folderPath = Path.GetFullPath($"../../../Knowledge Base/{folder}");
+            Console.WriteLine($"Choose {folder} model name");
+            int i = 0;
+            foreach (var path in Directory.GetFiles(folderPath))
+            {
+                Console.WriteLine($"{++i}. {path}");
+            }
+            var filePath = Directory.GetFiles(folderPath)[int.Parse(Console.ReadLine()) - 1];
+            var jsonContent = File.ReadAllText(filePath);
+            return JsonConvert.DeserializeObject<T>(jsonContent);
         }
     }
 }

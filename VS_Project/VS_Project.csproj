@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algorithms\DesicionTree.cs" />
     <Compile Include="Algorithms\kMeans.cs" />
     <Compile Include="Algorithms\KNN.cs" />
     <Compile Include="Extentions\ClassificationExtentions.cs" />
@@ -54,6 +55,8 @@
     <Compile Include="Extentions\CPointExtentions.cs" />
     <Compile Include="Extentions\DoubleExtensions.cs" />
     <Compile Include="Extentions\FileExtentions.cs" />
+    <Compile Include="Extentions\FloatExtentions.cs" />
+    <Compile Include="Extentions\ListExtentions.cs" />
     <Compile Include="Extentions\SampleExtentions.cs" />
     <Compile Include="Extentions\DataExtentions.cs" />
     <Compile Include="Forms\MainForm.cs">
@@ -70,6 +73,7 @@
     </Compile>
     <Compile Include="Model\Matrix.cs" />
     <Compile Include="Model\CPoint.cs" />
+    <Compile Include="Model\Node.cs" />
     <Compile Include="Model\Sample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

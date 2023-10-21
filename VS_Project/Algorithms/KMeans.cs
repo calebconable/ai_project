@@ -25,12 +25,13 @@ namespace VS_Project.Algorithms
         private int K { get; set; }
         private kMeans() { }
 
-        public static kMeans LoadModel(string name)
+        public void Open()
         {
-            var folderPath = Path.GetDirectoryName("../../AI_Models/kMeans");
-            var filePath = Path.Combine(folderPath, $"{name}.json");
-            var jsonContent = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<kMeans>(jsonContent);
+
+            var formattedDateTime = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"); // date and time with safe characters
+            var fileName = $"{formattedDateTime} (Model k = {K}).json"; // using .json extension
+            string jsonContent = JsonConvert.SerializeObject(this, JsonSerializerSignletone.SETTINGS);
+            FileExtentions.SaveFile(nameof(kMeans), fileName, jsonContent);
         }
 
         public void SaveModel()
