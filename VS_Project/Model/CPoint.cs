@@ -14,7 +14,7 @@ namespace VS_Project.Model
     public class CPoint : Sample
     {
         public static Random rnd = new Random();
-        private new int PredifinedClassValue;
+        protected new int PredifinedClassValue;
         private CPoint(ObjectSeries<string> trainingSample) : base(trainingSample) { }
         static Dictionary<string, double> attributeMax = new Dictionary<string, double>();
         static Dictionary<string, double> attributeMin = new Dictionary<string, double>();

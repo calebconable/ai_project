@@ -28,8 +28,8 @@ namespace VS_Project
         {
             RunConsoleTestApp(() =>
             {
-
-                /*Task.Run(async () =>
+                //Menu();
+                Task.Run(async () =>
                 {
 
                     while (true)
@@ -38,13 +38,13 @@ namespace VS_Project
                         var classifications = await randomForest.EvaluateAsync(Classification.TestSamples.ToArray());
                         Console.WriteLine(classifications.ConfusionMatrixAndAccuracy());
                     }
-                });*/
+                });
 
                 var randomForest = RandomForest.New(3);
                 Task.Run(async () =>
                 {
                     await randomForest.PerformBootstrapSamplingAsync(Classification.TrainingSamples.ToArray());
-                    randomForest.Build(15, 20, 10f, doneAction: () => { randomForest.Save(); });
+                    randomForest.Build(5, 20, double.NaN, doneAction: () => { randomForest.Save(); });
                 });
 
                 /*var desicionTree = DesicionTree.New(Classification.TrainingSamples.ToArray());
@@ -74,9 +74,11 @@ namespace VS_Project
         {
             int algorithmIndex = -1;
             while (true) {
-                Console.WriteLine("\nChoose a algorithm:");
+                Console.WriteLine("=======================================");
+                Console.WriteLine("Choose a algorithm:");
                 Console.WriteLine("0. kMeans");
                 Console.WriteLine("1. Random Forest");
+                Console.Write("\nChoice: ");
                 if (int.TryParse(Console.ReadLine(), out algorithmIndex) && algorithmIndex <= 1)
                 {
                     AlgorithmMenu();
@@ -95,24 +97,27 @@ namespace VS_Project
             while (true)
             {
                 Console.WriteLine("\nWhat do you want to do?");
-                Console.WriteLine("0. Get Models");
-                Console.WriteLine("1. Train");
-                Console.WriteLine("2. Evaluate");
-                Console.WriteLine("3. Back");
-                if (int.TryParse(Console.ReadLine(), out choice) && choice <= 2)
+                Console.WriteLine("0. Back");
+                Console.WriteLine("1. Get Models");
+                Console.WriteLine("2. Train");
+                Console.WriteLine("3. Evaluate");
+                Console.Write("\nChoice: ");
+                if (int.TryParse(Console.ReadLine(), out choice) && choice <= 3)
                 {
                     switch(choice)
                     {
-                        case 3:
+                        default:
                             Console.WriteLine("\n");
-                            return;
+                            break;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Choose from 0 - 1");
+                    Console.WriteLine("Choose from 0 - 3");
                 }
 
+                if (choice == 0)
+                    return;
             }
         }
 

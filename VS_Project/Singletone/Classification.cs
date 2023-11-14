@@ -34,6 +34,11 @@ namespace VS_Project.Singletone
             PredictedClass = classified;
         }
 
+        public bool TruePositive(int predictedClass) => predictedClass == PredefinedClass;
+        public bool TrueNegative(int predictedClass) => predictedClass == PredefinedClass;
+        public bool FalsePositive() => PredictedClass != PredefinedClass;
+        public bool FalseNegative() => PredictedClass != PredefinedClass;
+
         public override string ToString()
         {
             return $"Classification of {CLASS_ATTR_NAME} is {IsCorrectlyClassified}";
